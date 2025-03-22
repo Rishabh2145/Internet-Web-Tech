@@ -9,9 +9,9 @@
 <body>
     <h1 id="heading">New Connection Application Form</h1>
     <p id="headingsub">Please fill all details in capital letters</p>
+    <h2 id="connection">CONNECTION SERVICE(S) REQUIRED</h2>
     <table>
         <tr>
-            <th>Connection Service(s) Required</th>
             <th>New Connection Type</th>
             <th>Meter Type</th>
             <th>Total Area of Premises</th>
@@ -24,6 +24,58 @@
                 <option value="Commercial">Commercial</option>
                 <option value="Government">Government</option>
             </select>
+        </td>
+    
+        <td>
+            <select name="New Connection Type">
+                <option value="postpaid">postpaid</option>
+                <option value="prepaid">prepaid</option>
+            </select>
+        </td>
+            <td><input type="number" name="TotalAreaOfPremises1" placeholder="Enter area"></td>
+            <td><input type="number" name="TotalFloors1" placeholder="Enter Floors"></td>
+
     </table>
+    <h3>1.General Particulars</h3>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Date of birth</th>
+            <th>Applicant Name</th>
+        </tr>
+        <td>
+            <select name="Title">
+                <option value="Mr">Permanent</option>
+                <option value="Dr">Temporary</option>
+                <option value="Mrs">Commercial</option>
+                <option value="Ms">Government</option>
+            </select>
+        </td>
+    
+        <td>
+            <input type="date" name="dob1" placeholder="Enter DOB">
+        </td>
+            <td><input type="text" name="applicantname" placeholder="Enter name"></td>
+
+    </table>
+    <h4>2.Complete Supply Address</h4>
+        <table>
+            <tr>
+                <th>Supply Address</th>
+                <th>Area Pincode</th>
+                <th>Mobile Number</th>
+                <th>E-Mail</th>
+            </tr>
+            <td>
+                <input type="data" name="address" placeholder="Enter address">
+            </td>
+        
+            <td>
+                <input type="number" name="Pincode" placeholder="Enter pincode">
+            </td>
+                <td><input type="number" name="phonenumber" placeholder="Enter mobile no."></td>
+                <td><input type="data" name="email" placeholder="Enter e-mail"></td>
+    
+        </table>
 </body>
 </html>
