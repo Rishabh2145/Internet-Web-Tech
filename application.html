@@ -79,8 +79,8 @@
         </table>
         
     <h5 id="connection">3.Billing Address</h5>
-            <p>If same as above Ignore</p>
-            <input type="data" name="billaddress" placeholder="Enter Billing Address">
+            <p id="connectionsub">If same as above Ignore</p>
+            <input type="text" name="billaddress" placeholder="Enter Billing Address">
 
     <h6 id="connection">4.Category For electricity Usage </h6>
         <table>
@@ -115,6 +115,27 @@
                 </select>
             </td>
         </table>
+        <p id="connection" >5. Further Details</p> 
+            <table>
+                <tr>
+                    <th>Pan Card</th>
+                    <th>Aadhar Card</th>
+                    <th>GST Number</th>
+                </tr>
+                <td>
+                    <input type="data" name="pancard" placeholder="Enter Pan Card">
+                </td>
+                <td>
+                    <input type="numeric" name="aadharcard" placeholder="Enter Aadhar Card">
+                </td>
+                <td>
+                    <input type="numeric" name="gstnumber" placeholder="Enter GST Number">
+                </td>
+            </table>
+        <p id="connection">6.Please Check If all necessary documents are attached:</p>
+        <p id="connection">7. Declaration Form </p>
+        <p>I hereby declare that the information provided above is true to the best of my knowledge and belief. I understand that the information provided above will be used to determine my eligibility for the connection applied for. I understand that any false information provided by me will result in the rejection of my application and may result in legal action against me.</p>
+        <button id="submit">Submit</button>
 
 </body>
 </html>

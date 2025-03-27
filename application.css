@@ -8,7 +8,12 @@
 #connection {
     margin:0px;
     text-align: left;
-    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#connectionsub {
+    margin:10px;
+    text-align: left;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -40,3 +45,8 @@ tr {
     height: 50px;
 }
 
+body {
+    align-items: center;
+    height: 100vh;  
+    text-align: center; 
+}
