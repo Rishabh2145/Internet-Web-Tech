@@ -1,0 +1,22 @@
+{
+  "name": "project_iwt",
+  "version": "1.0.0",
+  "description": "This is the project of Department of Electricity of India for the course of Internet and Web Technologies.",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabh2145/Internet-Web-Tech.git"
+  },
+  "author": "Rishabh and Sahal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabh2145/Internet-Web-Tech/issues"
+  },
+  "homepage": "https://github.com/Rishabh2145/Internet-Web-Tech#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
