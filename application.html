@@ -36,7 +36,7 @@
             <td><input type="number" name="TotalFloors1" placeholder="Enter Floors"></td>
 
     </table>
-    <h3>1.General Particulars</h3>
+    <h3 id="connection">1.General Particulars</h3>
     <table>
         <tr>
             <th>Title</th>
@@ -58,7 +58,7 @@
             <td><input type="text" name="applicantname" placeholder="Enter name"></td>
 
     </table>
-    <h4>2.Complete Supply Address</h4>
+    <h4 id="connection">2.Complete Supply Address</h4>
         <table>
             <tr>
                 <th>Supply Address</th>
@@ -83,5 +83,38 @@
             <input type="data" name="billaddress" placeholder="Enter Billing Address">
 
     <h6 id="connection">4.Category For electricity Usage </h6>
+        <table>
+            <tr>
+                <th>Domestic</th>
+                <th>Non-Domestic</th>
+                <th>Industrial</th>
+                <th>Agricultural</th>
+            </tr>
+            <td>
+                <select name="Domestic">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>
+            <td>
+                <select name="Non-Domestic">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>
+            <td>
+                <select name="Industrial">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>
+            <td>
+                <select name="Agricultural">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>
+        </table>
+
 </body>
 </html>
