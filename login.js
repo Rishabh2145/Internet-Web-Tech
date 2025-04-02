@@ -14,10 +14,18 @@ reg.onclick = () => {
     newAcc.style.display = "flex";
     cred.style.display = "none";
 }
-register.onclick = () => {
-    let temp = confirm('Are you sure you want to submit?');
-    if (temp == true){
+
+register.addEventListener("click", function (event) {
+    event.preventDefault(); 
+
+    let form = document.getElementById("registerForm");
+
+    if (form.checkValidity()) {
+      if (confirm("Are you sure you want to submit?")) {
         alert("Registration is successful. You can now login through your Account ID and Password.");
         back_login();
+      }
+    } else {
+      form.reportValidity();
     }
-}
+  });
