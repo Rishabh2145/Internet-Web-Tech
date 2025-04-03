@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="login.css">
     <link rel="icon" href="logo1.png">
     <title>Login page : Electricity Department of India</title>
+
+    <script>
+        document.documentElement.style.overflow = 'hidden'; // Prevent scrolling during loading
+    </script>
+
 </head>
 <body>
     <div id="top">
@@ -17,7 +22,7 @@
             <p>भारतीय विद्युत विभाग</p>
         </div>
     </div>
-    <div id="cred" style="display: flex;">
+    <div id="cred">
         <div id="translusant">
             <p>Enter Credentials</p>
             <p style="width: 250px ;font-size: medium; text-align: left; margin : 2px 0px;">Enter Account ID</p>
@@ -44,8 +49,8 @@
                 Email Address: <input type="text" id="email" required placeholder="Enter Email Address">
             </div>
             <div id="contact">
-                Mobile Number: <input type="number" id="phone" placeholder="Enter Mobile Number" required>
-                Phone Number: <input type="number" id="phone" placeholder="Enter Phone Number">
+                Mobile Number: <input type="number" id="phone1" placeholder="Enter Mobile Number" required>
+                Phone Number: <input type="number" id="phone2" placeholder="Enter Phone Number">
             </div>
             <div id="passcode">
                 Generate Password: <input type="password" placeholder="Enter Password" id="pass" required>
@@ -54,7 +59,7 @@
             <button id="insert">Register</button>
         </form>
     </div>
-    <div id="down">
+    <div id="down" style="display: none;">
         <div id="datetime"></div>
         <script>
             function updateDateTime() {
