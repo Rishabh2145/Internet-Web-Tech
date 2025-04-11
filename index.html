@@ -7,10 +7,6 @@
     <link rel="icon" href="logo1.png">
     <title>Login page : Electricity Department of India</title>
 
-    <script>
-        document.documentElement.style.overflow = 'hidden'; // Prevent scrolling during loading
-    </script>
-
 </head>
 <body>
     <div id="top">
@@ -38,28 +34,34 @@
             <button id="back" style="height: 25px; border: 1px solid white ; background-color: rgba(0, 0, 0, 0) ; width: 80px;">Back</button>
             <p style="text-align: center; font-weight: 600; font-size: 20px;">Enter your Account Details</p>
             <div style="justify-content: flex-start;">
-                Account ID: <input type="number" id="acc_id" placeholder="Enter Account ID" required>
+                Account ID: <input type="number" id="acc_id" placeholder="Enter Account ID" >
+                <p id="errorid"></p>
             </div>
             <div id="name">
-                First Name: <input type="text" id="first_name" placeholder="Enter First Name" required>
+                First Name: <input type="text" id="first_name" placeholder="Enter First Name" >
                 Middle Name (Optional): <input type="text" placeholder="Enter Middle Name" id="middle_name">
                 Last Name: <input type="text" id="last_name" placeholder="Enter Last Name">
+                <p id="errorname"></p>
             </div>
             <div style="justify-content: flex-start;">
-                Email Address: <input type="text" id="email" required placeholder="Enter Email Address">
+                Email Address: <input type="text" id="email"  placeholder="Enter Email Address">
+                <p id="erroremail"></p>
             </div>
             <div id="contact">
-                Mobile Number: <input type="number" id="phone1" placeholder="Enter Mobile Number" required>
+                Mobile Number: <input type="number" id="phone1" placeholder="Enter Mobile Number" >
                 Phone Number: <input type="number" id="phone2" placeholder="Enter Phone Number">
+                <p id="errorphone"></p>
             </div>
             <div id="passcode">
-                Generate Password: <input type="password" placeholder="Enter Password" id="pass" required>
-                Confirm Password: <input type="password" id="conf_pass" placeholder="Confirm Password" required>
+                Generate Password: <input type="password" placeholder="Enter Password" id="pass" >
+                <p id="errorpass"></p>
+                Confirm Password: <input type="password" id="conf_pass" placeholder="Confirm Password" >
+                <p id="errorconf"></p>
             </div>
             <button id="insert">Register</button>
         </form>
     </div>
-    <div id="down" style="display: none;">
+    <div id="down">
         <div id="datetime"></div>
         <script>
             function updateDateTime() {

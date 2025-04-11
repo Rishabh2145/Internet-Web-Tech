@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration: Electricity Department of India</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="logo1.png">
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Registration Form</div>
+        <div id="time"></div>
+    </div>
+
+
+
+    <script>
+        setInterval(() => {
+            const date = new Date();
+            document.getElementById("time").innerHTML =   date.toLocaleDateString() + " | " + date.toLocaleTimeString() + " | IST";
+        }, 1000);
+    </script>
+</body>
+
+</html>

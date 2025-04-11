@@ -7,28 +7,41 @@ var reg = document.getElementById("reg");
 var register = document.getElementById("insert");
 
 
-function back_login()
-{
-    newAcc.style.display = "none";
-    cred.style.display = "flex";
-}
-back.onclick = back_login;
-reg.onclick = () => {
-    newAcc.style.display = "flex";
-    cred.style.display = "none";
-}
+back.onclick = window.location.href = "index.html";
+reg.onclick = window.location.href = "register.html";
 
-register.addEventListener("click", function (event) {
-    event.preventDefault(); 
+function validityForm() {
+  var id = document.getElementById("acc_id");
+  var eid = document.getElementById("errorid");
+  var fname = document.getElementById("first_name");
+  var mname = document.getElementById("middle_name");
+  var lname = document.getElementById("last_name");
+  var ename = document.getElementById("errorname");
+  var email = document.getElementById("email");
+  var eemail = document.getElementById("erroremail");
+  var pass = document.getElementById("pass");
+  var epass = document.getElementById("errorpass");
+  var conf_pass = document.getElementById("conf_pass");
+  var econf_pass = document.getElementById("errorcof");
+  var phone1 = document.getElementById("phone1");
+  var phone2 = document.getElementById("phone2");
+  var ephone = document.getElementById("errorphone");
 
-    let form = document.getElementById("registerForm");
-
-    if (form.checkValidity()) {
-      if (confirm("Are you sure you want to submit?")) {
-        alert("Registration is successful. You can now login through your Account ID and Password.");
-        back_login();
-      }
-    } else {
-      form.reportValidity();
+  function emailValid(email)
+  {
+    const emailRegx = /^[A-Za-z0-9._%-+]+@[A-Za-z0-9-+]+\.[A-Za-z.]{2,}$/;
+    if (emailRegx.test(email) == true) {
+      eemail.innerHTML = "";
     }
-  });
+    else {
+      eemail.innerText = "Please enter a valid email address.";
+      eemail.style.color = "red";
+      eemail.style.fontSize = "small";
+    }
+  }
+
+  email.onkeyup = emailValid(email.value);
+  // alert(email.value);/
+}
+// validityForm();
+setInterval(validityForm,10);
