@@ -7,6 +7,8 @@ var reg = document.getElementById("reg");
 var register = document.getElementById("insert");
 
 
-back.onclick = window.location.href = "index.html";
-reg.onclick = window.location.href = "register.html";
-
+// back.onclick = window.location.href = "index.html";
+// reg.onclick = document.location.href = "register.html";
+reg.addEventListener("click", function() {
+    window.location.href = "register.html";
+});
