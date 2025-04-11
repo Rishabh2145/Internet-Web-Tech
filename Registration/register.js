@@ -1,8 +1,8 @@
 // JavaScript code for the registration form validation and submission
-document.getElementById("submit").addEventListener("click", () => {
-  alert("Account Created Successfully!");
-  window.location.href = "index.html";
-});
+// document.getElementById("submit").addEventListener("click", () => {
+//   alert("Account Created Successfully!");
+//   window.location.href = "index.html";
+// });
 document.getElementById("reset").onclick = () => { return confirm("Are you sure you want to reset the form?"); }
 
 setInterval(() => {
