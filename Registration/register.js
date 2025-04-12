@@ -66,7 +66,7 @@ function validityForm() {
     }
   }
   function nameValid(name, error) {
-    const nameRegx = /^[A-Z]{1}[a-z]+$/;
+    const nameRegx = /^[A-Z.]{1}[a-z.]+$/;
     if (nameRegx.test(name) == true || name == "") {
       error.innerHTML = "";
     }
