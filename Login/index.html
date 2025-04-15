@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="logo1.png">
+    <title>Login: Electricity Department of India</title>
+
+</head>
+<body>
+    <div id="top">
+        <div id="image">
+            <img src="logo1.png" alt="satyamev jayte">
+        </div>
+        <div id="text">
+            <p>Department of Electricity of India</p>
+            <p>भारतीय विद्युत विभाग</p>
+        </div>
+    </div>
+    <div id="cred">
+        <div id="translusant">
+            <p>Enter Credentials</p>
+            <p style="width: 250px ;font-size: medium; text-align: left; margin : 2px 0px;">Enter Account ID</p>
+            <input type="text" id="username" placeholder="Account ID">
+            <p style="width: 250px ;font-size: medium; text-align: left; margin : 2px 0px;">Enter Password</p>
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Login</button>
+            <button id="reg">Not Registered? Create a new account.</button>
+        </div>
+    </div>
+    <div id="down">
+        <div id="datetime"></div>
+        <script>
+            function updateDateTime() {
+                let now = new Date();
+                let date = now.toLocaleDateString();
+                let time = now.toLocaleTimeString();
+                document.getElementById("datetime").innerHTML = date + " | " + time + " | Indian Standard Time";
+            }
+            setInterval(updateDateTime, 1000);
+            updateDateTime(); 
+        </script>
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

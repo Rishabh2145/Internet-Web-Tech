@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration: Electricity Department of India</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="logo1.png">
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Registration Form</div>
+        <div id="time"></div>
+    </div>
+    <form>
+        <table>
+            <tr>
+                <td>Account ID in <em>(AB1234YZ)</em>:</td>
+                <td>
+                    <input type="text" id="acc_id" name="acc_id" placeholder="Account ID">
+                    <p id="errorid"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    First Name :
+                </td>
+                <td>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                    <p id="errorname"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Middle Name <em>(Optional)</em> :
+                </td>
+                <td>
+                    <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name (Optional)">
+                    <p id="errormname"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name :
+                </td>
+                <td>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                    <p id="errorlname"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email Address :
+                </td>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="Email Address">
+                    <p id="erroremail"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mobile Number :
+                </td>
+                <td>
+                    <input type="text" id="phone1" name="phone1" placeholder="Mobile Number">
+                    <p id="errorphone"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    LandLine Number <em>(Optional)</em>:
+                </td>
+                <td>
+                    <input type="text" id="phone2" name="phone2" placeholder="Phone Number">
+                    <p id="ephone2"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;">
+                    Create Password : <br>
+                    <div style="font-size: 10px; width: 60%; margin-top: 10px;">
+
+                        <li>At least 8 characters long</li>
+                        <li>Includes at least one uppercase letter (A–Z)</li>
+                        <li>Includes at least one lowercase letter (a–z)</li>
+                        <li>Includes at least one number (0–9)</li>
+                        <li>Includes at least one special character (e.g., @, #, $, %, !, &, *)</li>
+
+                    </div>
+                </td>
+                <td>
+                    <input type="password" id="pass" name="pass" placeholder="Password">
+                    <p id="errorpass"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Confirm Password :
+                </td>
+                <td>
+                    <input type="password" id="conf_pass" name="conf_pass" placeholder="Confirm Password">
+                    <p id="errorconf"></p>
+                </td>
+            </tr>
+        </table>
+        <div style="display: flex; flex-direction: row; justify-content: space-around; width: 50%;">
+            <input type="reset" id="reset" name="reset" value="Reset">
+            <input type="submit" id="submit" name="submit" value="Register">
+        </div>
+    </form>
+    <div id="down">
+        <h3>🔒 Data Privacy & Security Notice</h3>
+
+        <p>Your privacy is our priority. The Electricity Department is committed to safeguarding your personal
+            information with the highest standards of data protection.</p>
+
+        <ul>
+            <li>All the information you provide during registration — including your name, contact details, and
+                account id — is collected solely for account creation and service verification purposes.</li>
+            <li>We do <strong>not</strong> share your personal data with third parties without your explicit consent.
+            </li>
+            <li>Our systems use <strong>secure encryption protocols</strong> to protect your data during transmission
+                and storage.</li>
+            <li>Your account credentials (especially your password) are encrypted and inaccessible to anyone, including
+                our support staff.</li>
+            <li>We adhere strictly to government regulations and data protection laws to ensure your information is
+                handled responsibly.</li>
+        </ul>
+
+        <p>By registering, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>. You can
+            update or delete your data at any time through your account dashboard or by contacting our support team.</p>
+
+    </div>
+
+    <script src="register.js"></script>
+</body>
+
+</html>
