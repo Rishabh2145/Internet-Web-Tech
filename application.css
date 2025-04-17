@@ -1,0 +1,52 @@
+#heading {
+    margin:0px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#connection {
+    margin:0px;
+    text-align: left;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#connectionsub {
+    margin:10px;
+    text-align: left;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#headingsub {
+    margin:0px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+input, select {
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+tr {
+    height: 50px;
+}
+
+body {
+    align-items: center;
+    height: 100vh;  
+    text-align: center; 
+}
