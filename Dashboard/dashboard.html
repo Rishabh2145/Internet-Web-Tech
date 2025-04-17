@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard: Electricity Department of India</title>
+    <link rel="icon" href="../Login/logo1.png">
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
     <div id="top">
         <div id="head">
@@ -20,16 +23,29 @@
         <div id="title">Dashboard</div>
         <div id="time"></div>
     </div>
-    <!-- <div id="menu">
-        <ul>
-            <li><a href="../Registration/registration.html">Registration</a></li>
-            <li><a href="../Bill/bill.html">Bill</a></li>
-            <li><a href="../Complaint/complaint.html">Complaint</a></li>
-            <li><a href="../Payment/payment.html">Payment</a></li>
-            <li><a href="../Feedback/feedback.html">Feedback</a></li>
-            <li><a href="../Contact/contact.html">Contact Us</a></li>
-        </ul>
-    </div> -->
+    <div id="menu">
+        <div id="menu-hover"><img src="list.png" id="menu-icon" alt=""></div>
+        <div id="hover">
+            <ul>
+                <div><a href="dashboard.html">Home</a><br></div>
+                <div><a href="../Spmething">Staff Section</a><br></div>
+                <div><a href="../Services/services.html">Bill Payment</a><br></div>
+                <div><a href="../Complaint/complaint.html">Complaint</a><br></div>
+                <div><a href="../Feedback/feedback.html">Feedback</a><br></div>
+                <div><a href="../Contact/contact.html">Contact</a><br></div>
+                <div><a href="../Login/index.html">Login as Existing User</a><br></div>
+                <div><a href="../Registration/register.html">Register as New User</a><br></div>
+                <div><a href="../About/about.html">About</a><br></div>
+                
+            </ul>
+        </div>
+        <div id="login">
+            <a href="../Login/index.html" id="log">LogIn</a>
+            <a href="../Registration/register.html" id="reg">Register</a>
+            <p id="logged"></p>
+        </div>
+
+    </div>
     <div id="slider">
         <div id="slides">
             <img src="img1.png" alt="slide1" srcset="" class="slide">
@@ -41,4 +57,3 @@
 
     <script src="dashboard.js"></script>
 </body>
-</html>
