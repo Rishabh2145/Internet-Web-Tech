@@ -1,11 +1,11 @@
 body {
   background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  font-family: English;
   margin: 0;
   padding: 0px;
-  height: 100vh;
-  width: 100vw;
-  font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  font-family: English;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -26,15 +26,16 @@ body #top {
 }
 body #top #head {
   display: flex;
+  align-items: center;
   color: black;
   text-indent: 15px;
-  font-size: 15px;
   font-weight: bold;
 }
 body #top #head #image {
   height: 12vh;
   border-radius: 50%;
   margin-right: 10px;
+  padding: 0px 10px;
 }
 body #top #head #image img {
   height: 12vh;
@@ -44,13 +45,18 @@ body #top #head #text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
   align-items: center;
+  border-left: #ccc 1px solid;
 }
 body #top #head #text .ph1 {
   margin-bottom: 2px;
+  font-size: 15px;
 }
 body #top #head #text .ph2 {
   margin-top: 2px;
+  font-family: Hindi;
+  font-size: 20px;
 }
 body #top #title {
   font-size: 20px;
@@ -61,7 +67,7 @@ body #top #title {
 }
 body #top #time {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 15px;
   margin-right: 35px;
 }
 body #slider {
@@ -173,6 +179,130 @@ body #menu #login a {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+body #main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body #main #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  padding: 0px 20px;
+  margin: 40px 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body #main #container h1 {
+  font-size: 32px;
+  font-family: Hindi, "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin: 0px;
+}
+body #main #container .eng {
+  font-family: English;
+}
+body #main #content {
+  height: 65vh;
+  margin-top: 30px;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0px;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body #main #content h2 {
+  padding-top: 20px;
+}
+body #main #content div {
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  gap: 10px;
+}
+body #main #content div a {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 22%;
+  border-radius: 10px;
+  font-family: Englishbold;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: cadetblue;
+}
+body #main #content div a:hover {
+  transition: all 0.4s ease;
+  transform: scale(1.05);
+}
+body #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Hindi;
+  padding-top: 10px;
+}
+body #footer p {
+  margin: 5px 0px;
+}
+
+@font-face {
+  font-family: "Hindi";
+  src: url("../Login/hindi.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "English";
+  src: url("../Aver-opKo.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Englishbold";
+  src: url("../AverBold-4YlW.ttf") format("truetype");
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=dashboard.css.map */
