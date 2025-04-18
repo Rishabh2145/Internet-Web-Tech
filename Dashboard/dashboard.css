@@ -5,9 +5,10 @@ body {
   padding: 0px;
   height: 100vh;
   width: 100vw;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
 }
 body #top {
@@ -67,19 +68,111 @@ body #slider {
   width: 80%;
   height: 400px;
   overflow: hidden;
+  aspect-ratio: 2/1;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
 }
-body #slider .slides {
+body #slider #slides {
   display: flex;
-  width: 320%;
+  width: 100%;
+  object-fit: cover;
   transition: transform 0.5s ease-in-out;
 }
-body #slider .slide {
-  width: 80%;
+body #slider img {
+  width: 100%;
   height: 400px;
+  flex-shrink: 0;
   object-fit: cover;
+}
+body #menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body #menu #menu-icon {
+  height: 35px;
+  margin-left: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #hover {
+  margin-left: 15px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  border-radius: 15px;
+  color: black;
+  width: 15%;
+  background-color: white;
+}
+body #menu #hover ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body #menu #hover ul div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
+  overflow: hidden;
+}
+body #menu #hover ul div a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  font-size: 15px;
+}
+body #menu #hover ul div:not(:last-child) {
+  border-bottom: #ccc 1px solid;
+}
+body #menu #hover ul div:hover {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+body #menu #hover ul div:hover a {
+  color: #0056b3;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+}
+body #menu #login {
+  display: flex;
+  direction: rtl;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #login #log {
+  background-color: #007BFF;
+}
+body #menu #login #log:hover {
+  background-color: #0056b3;
+}
+body #menu #login #reg {
+  background-color: #0BDA51;
+}
+body #menu #login #reg:hover {
+  background-color: #0AAA40;
+}
+body #menu #login a {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=dashboard.css.map */
