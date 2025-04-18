@@ -1,15 +1,59 @@
 #heading {
-    margin:0px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom:0;
+    margin-top:0;
     text-align: center;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+#headingsub {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top:1px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+#heading2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    font-weight:10;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table{
+    border:2px solid black;
+    text-align:left;
+}
+
+tr,th,td{
+    border:2px solid black;
+    text-align:left;
+}
+
+#heading3 {
+    padding-right: 10px;
+    padding-bottom:10px;
+    margin-bottom:0;
+    text-align: left;
+    font-weight:550;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 #connection {
-    margin:0px;
-    text-align: left;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
+        padding-bottom: 10px;
+        padding-right: 10px;
+        margin-bottom:0;
+        text-align: left;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+body{
+margin: 0px 150px 0px 150px; /* top, right, bottom, left */
+    }
+
 
 #connectionsub {
     margin:10px;
@@ -17,11 +61,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#headingsub {
-    margin:0px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 
 
 table {
