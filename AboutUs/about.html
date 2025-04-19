@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us: Electricity Department of India</title>
+    <link rel="icon" href="../Login/logo1.png">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="../Registration/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">About Us</div>
+        <div id="time"></div>
+    </div>
+
+    <div id="menu">
+        <div id="menu-hover"><img src="../Dashboard/list.png" id="menu-icon" alt=""></div>
+        <div id="hover">
+            <ul>
+                <div><a href="../Dashboard/dashboard.html">Home</a><br></div>
+                <div><a href="../Something">Staff Section</a><br></div>
+                <div><a href="../ApplicationForm/application.html">Apply for New Connection</a><br></div>
+                <div><a href="bill.html">Bill Payment</a><br></div>
+                <div><a href="../Complaint/complaint.html">Complaint</a><br></div>
+                <div><a href="../Feedback/feedback.html">Feedback</a><br></div>
+                <div><a href="../Contact/contact.html">Contact</a><br></div>
+                <div><a href="../Login/login.html">Login as Existing User</a><br></div>
+                <div><a href="../Registration/register.html">Register as New User</a><br></div>
+                <div><a href="../AboutUs/about.html">About</a><br></div>
+
+            </ul>
+        </div>
+        <div id="Home">
+            <a href="../Dashboard/dashboard.html" id="log">Homepage</a>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div id="lottie-animation"></div>
+        <div id="content">
+            <h2>About Us</h2>
+            <p>
+                Welcome to the official portal of the Electricity Department of India — your one-stop destination for
+                all electricity-related services. We are committed to delivering reliable, transparent, and
+                user-friendly solutions for citizens across the country.
+                <br><br>
+                Whether you need to pay your electricity bill, apply for a new connection, lodge a complaint, or connect
+                with our departmental staff, our platform is designed to make every process smooth and efficient.
+                <br><br>
+                Our mission is to empower every household and business with uninterrupted power and trustworthy service.
+                With a focus on digital transformation and customer satisfaction, we aim to bridge the gap between
+                citizens and the power infrastructure that fuels their lives.
+                <br><br>
+                Thank you for trusting us. Together, let's light up a brighter India.
+            </p>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <p>
+            Powered by the Electricity Department • &copy; 2025 All Rights Reserved
+        </p>
+        <p>
+            For any queries, feel free to email us at
+            <a href="mailto:rishabh064.nitsri@gmail.com">rishabh064.nitsri@gmail.com</a>
+        </p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('time').innerHTML = now.toLocaleDateString('en-IN', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'anime.json'
+        });
+    </script>
+    <script src="about.js"></script>
+</body>
+
+</html>
