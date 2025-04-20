@@ -126,6 +126,11 @@
     <p id="headingsub">6. Proof of Land Use (Land Use Certificate, etc.)</p>
     <p id="headingsub">7. Proof of Electrical Safety (Electrical Safety Certificate, etc.)</p>
     <p id="headingsub">8. Proof of Fire Safety (Fire Safety Certificate, etc.)</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="fileupload" class="custom-upload">Attach Document:</label>
+        <input id="fileupload" type="file" id="fileUpload" name="document" accept=".pdf,.jpg,.word" multiple>
+        <button class="custom-upload" type="submit">Upload</button>
+    </form>
 
     <p id="heading3">7. Declaration Form </p>
     <p id="headingsub">I hereby declare that the information provided above is true to the best of my knowledge and
