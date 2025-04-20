@@ -1,15 +1,12 @@
 body {
   background-color: #f0f0f0;
   font-family: English;
-  margin: 0;
-  padding: 0px;
-  width: 100%;
-  max-width: 100%;
-  font-family: English;
   display: flex;
   flex-direction: column;
-  position: relative;
+  margin: 0;
+  padding: 0;
   align-items: center;
+  justify-content: center;
 }
 body #top {
   color: black;
@@ -69,27 +66,6 @@ body #top #time {
   font-weight: bold;
   font-size: 15px;
   margin-right: 35px;
-}
-body #slider {
-  width: 80%;
-  height: 400px;
-  overflow: hidden;
-  aspect-ratio: 2/1;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-body #slider #slides {
-  display: flex;
-  width: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-in-out;
-}
-body #slider img {
-  width: 100%;
-  height: 400px;
-  flex-shrink: 0;
-  object-fit: cover;
 }
 body #menu {
   display: flex;
@@ -153,124 +129,102 @@ body #menu #hover ul div:hover a {
   text-decoration: underline;
   text-decoration-thickness: 0.1em;
 }
-body #menu #login {
+body #menu #Home {
   display: flex;
   direction: rtl;
   justify-content: center;
   align-items: center;
 }
-body #menu #login #log {
+body #menu #Home #log {
   background-color: #007BFF;
-}
-body #menu #login #log:hover {
-  background-color: #0056b3;
-}
-body #menu #login #reg {
-  background-color: #0BDA51;
-}
-body #menu #login #reg:hover {
-  background-color: #0AAA40;
-}
-body #menu #login a {
-  background-color: rgba(0, 0, 0, 0.3);
-  margin-right: 5px;
+  height: 40px;
+  width: 100px;
   color: white;
+  margin-right: 15px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #Home #log:hover {
+  background-color: #0056b3;
 }
 body #main {
   display: flex;
-  flex-direction: column;
+  height: 65vh;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 80%;
+  background-color: #fbf9f7;
+}
+body #main #animation {
+  display: flex;
   justify-content: center;
+  border-radius: 15px;
   align-items: center;
   width: 100%;
-}
-body #main #container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
   height: 100%;
-  padding: 0px 20px;
-  margin: 40px 0px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.4s;
+  background-color: #fbf9f7;
+  width: 50%;
 }
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-body #main #container h1 {
-  font-size: 32px;
-  font-family: Hindi, "Times New Roman", Times, serif;
-  font-weight: bold;
-  margin-bottom: 5px;
-  margin: 0px;
-}
-body #main #container .eng {
-  font-family: English;
-}
-body #main #content {
-  height: 65vh;
-  margin-top: 30px;
-  width: 90%;
+body #main #animation img {
+  height: 80%;
   border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+body #main #bill {
+  width: 40vw;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 20px 0px;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 1s;
-}
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-body #main #content h2 {
-  padding-top: 20px;
-}
-body #main #content div {
   justify-content: space-around;
   align-items: center;
-  height: 40%;
-  width: 100%;
-  padding: 10px 0px;
-  display: flex;
-  gap: 10px;
+  padding: 20px;
 }
-body #main #content div a {
+body #main #bill table {
+  width: 100%;
+  border-collapse: collapse;
   display: flex;
-  margin: 20px 0px;
   justify-content: center;
   align-items: center;
-  height: 85%;
-  width: 22%;
-  border-radius: 10px;
-  font-family: Englishbold;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: cadetblue;
+  margin-top: 20px;
 }
-body #main #content div a:hover {
-  transition: all 0.4s ease;
-  transform: scale(1.05);
+body #main #bill table th, body #main #bill table td {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+body #main #bill table th {
+  font-weight: bold;
+}
+body #main #bill button {
+  height: 50px;
+  margin: 15px;
+  width: 150px;
+  background-color: #0BDA51;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+body #main #bill select, body #main #bill input {
+  margin-left: 15px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  font-family: English;
+  text-align: center;
+  font-size: 15px;
+  background-color: #f0f0f0;
+}
+body #main #bill select {
+  width: 150px;
+}
+body #main #bill p {
+  margin: 4px;
+  width: 100%;
 }
 body #footer {
   display: flex;
@@ -290,19 +244,16 @@ body #footer p {
 }
 
 @font-face {
-  font-family: "Hindi";
-  src: url("../Login/hindi.ttf") format("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "English";
+  font-family: English;
   src: url("../Aver-opKo.ttf") format("truetype");
-  font-weight: normal;
 }
 @font-face {
-  font-family: "Englishbold";
+  font-family: Englishbold;
   src: url("../AverBold-4YlW.ttf") format("truetype");
-  font-weight: normal;
+}
+@font-face {
+  font-family: Hindi;
+  src: url("../Login/hindi.ttf") format("truetype");
 }
 
-/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=bill.css.map */
