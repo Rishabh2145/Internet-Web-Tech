@@ -42,6 +42,7 @@ tr,th,td{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 #connection {
         padding-bottom: 10px;
         padding-right: 10px;
@@ -53,16 +54,32 @@ tr,th,td{
 body{
 margin: 0px 150px 0px 150px; /* top, right, bottom, left */
     }
-
+.fileinput{
+    margin-left:0;
+    text-align:left;
+}
 
 #connectionsub {
-    margin:10px;
+    padding:0;
+    margin-top:0;
     text-align: left;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h3{
+    font-size:16px;
+}
 
+h4{
+    font-size:16px;
+}
+h5{
+    font-size:16px;
+}
 
+h6{
+    font-size:16px;
+}
 
 table {
     width: 100%;
