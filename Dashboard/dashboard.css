@@ -5,7 +5,6 @@ body {
   padding: 0px;
   width: 100%;
   max-width: 100%;
-  font-family: English;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -303,6 +302,115 @@ body #footer p {
   font-family: "Englishbold";
   src: url("../AverBold-4YlW.ttf") format("truetype");
   font-weight: normal;
+}
+#t1 {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  body #top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #top #head {
+    align-items: center;
+  }
+  body #top #head #image {
+    height: 8vh;
+    margin-right: 5px;
+  }
+  body #top #head #image img {
+    height: 8vh;
+  }
+  body #top #head #text {
+    padding-left: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  body #top #head #text .ph1 {
+    font-size: 10px;
+  }
+  body #top #head #text .ph2 {
+    text-align: center;
+    font-size: 12px;
+  }
+  body #top #title {
+    font-size: 15px;
+    display: none;
+  }
+  body #top #time {
+    font-size: 12px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  body #t1 {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  body #slider {
+    height: 200px;
+    width: 90%;
+  }
+  body #slider #slides img {
+    height: 200px;
+  }
+  body #main #container {
+    margin: 20px 0px;
+    font-size: 15px;
+  }
+  body #main #container h1 {
+    font-size: 25px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 2px 0px;
+    padding: 0px;
+  }
+  body #main #container .eng {
+    font-size: 20px;
+  }
+  body #main #content {
+    height: 45vh;
+    margin-top: 30px;
+    width: 90%;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  body #main #content h2 {
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  body #main #content div a {
+    font-size: 15px;
+    height: 80%;
+    width: 31%;
+    font-size: 15px;
+    background-color: cadetblue;
+    vertical-align: middle;
+    text-align: center;
+  }
+  body #footer {
+    padding: 10px 0px;
+  }
+  body #footer p {
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 
 /*# sourceMappingURL=dashboard.css.map */

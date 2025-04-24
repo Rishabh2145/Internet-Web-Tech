@@ -41,6 +41,7 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
                 .ph1 {
                     margin-bottom: 2px;
                 }
@@ -64,17 +65,23 @@ body {
         }
     }
 
+    #t1{
+        display: none;
+    }
+
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        div a{
+
+        div a {
             cursor: pointer;
             color: #0056b3;
             font-weight: bold;
             margin-right: 10px;
         }
+
         table {
             margin: 0 auto;
             margin-top: 20px;
@@ -84,6 +91,15 @@ body {
             background-color: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            #req{
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                justify-content: center;
+                align-items: self-start;
+                text-align: left;
+            }
             th {
                 text-align: left;
                 font-weight: bold;
@@ -102,7 +118,8 @@ body {
                     font-size: 14px;
                     text-align: center;
                 }
-                p{
+
+                p {
                     color: red;
                     font-size: 6px;
                     margin-top: 2px;
@@ -125,6 +142,7 @@ body {
                 background-color: #0056b3;
             }
         }
+
         #reset {
             margin-top: 20px;
             width: 150px;
@@ -141,9 +159,10 @@ body {
             }
         }
 
-        
+
     }
-    #down{
+
+    #down {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -153,9 +172,13 @@ body {
         font-size: 14px;
         color: black;
         background-color: white;
-        h3,p,li{
+
+        h3,
+        p,
+        li {
             padding: 0px 20px;
         }
+
         a {
             text-decoration: none;
             color: #007BFF;
@@ -166,4 +189,87 @@ body {
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        #top {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            // background-color: green;
+
+            #head {
+                align-items: center;
+
+                #image {
+                    height: 8vh;
+                    margin-right: 5px;
+
+                    img {
+                        height: 8vh;
+                    }
+                }
+
+                #text {
+                    padding-left: 10px;
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding-left: 0px;
+
+                    .ph1 {
+                        font-size: 10px;
+                    }
+
+                    .ph2 {
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            #title {
+                font-size: 15px;
+                display: none;
+            }
+
+            #time {
+                font-size: 12px;
+                padding: 5px;
+                margin-right: 5px;
+            }
+        }
+        #t1{
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            text-decoration: underline;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        form {
+            table {
+                width: 90%;
+                td{
+                    width: 40%;
+                    font-size: 12px;
+                    input {
+                        width: 100%;
+                        padding: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            #reset{
+                margin-right: 20px;
+            }
+        }
+    }
+
 }

@@ -207,5 +207,83 @@ body #contact p a {
   src: url("../AverBold-4YlW.ttf") format("truetype");
   font-weight: normal;
 }
+@media screen and (max-width: 1200px) {
+  body #top {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body #top #naming {
+    justify-content: start;
+    padding: 10px 0px;
+  }
+  body #top #naming #image {
+    height: 80px;
+    width: 60px;
+  }
+  body #top #naming #image img {
+    height: 60px;
+  }
+  body #top #naming #text {
+    padding-left: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body #top #naming #text p {
+    text-align: center;
+    font-size: 15px;
+  }
+  body #top #naming #text .eng {
+    font-size: 12px;
+  }
+  body #top #right {
+    justify-content: start;
+    width: 30%;
+    align-items: end;
+    padding: 5px;
+  }
+  body #top #right #time {
+    font-size: 12px;
+    text-align: end;
+  }
+  body #top #right #home {
+    justify-content: end;
+    width: 100%;
+    margin-right: 15px;
+    height: 20px;
+  }
+  body #cred {
+    flex-direction: column;
+    height: 70%;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    gap: 0px;
+  }
+  body #cred #lottie-animation {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body #cred #login-main {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #contact {
+    height: 50px;
+  }
+  #contact p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=login.css.map */
