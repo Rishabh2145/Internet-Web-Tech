@@ -307,7 +307,7 @@ body #footer p {
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 786px) {
   body #top {
     align-items: center;
     display: flex;
