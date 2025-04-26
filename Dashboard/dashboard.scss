@@ -230,10 +230,11 @@ body {
 
             @keyframes fadeIn {
                 to {
-                  opacity: 1;
-                  transform: translateY(0);
+                    opacity: 1;
+                    transform: translateY(0);
                 }
-              }
+            }
+
             h1 {
                 font-size: 32px;
                 font-family: Hindi, 'Times New Roman', Times, serif;
@@ -246,7 +247,8 @@ body {
                 font-family: English;
             }
         }
-        #content{
+
+        #content {
             height: 65vh;
             margin-top: 30px;
             width: 90%;
@@ -267,15 +269,16 @@ body {
 
             @keyframes fadeIn {
                 to {
-                  opacity: 1;
-                  transform: translateY(0);
+                    opacity: 1;
+                    transform: translateY(0);
                 }
-              }
+            }
 
-            h2{
+            h2 {
                 padding-top: 20px;
             }
-            div{
+
+            div {
                 justify-content: space-around;
                 align-items: center;
                 height: 40%;
@@ -283,8 +286,8 @@ body {
                 padding: 10px 0px;
                 display: flex;
                 gap: 10px;
-                
-                a{
+
+                a {
                     display: flex;
                     margin: 20px 0px;
                     justify-content: center;
@@ -298,15 +301,21 @@ body {
                     text-decoration: none;
                     cursor: pointer;
                     background-color: cadetblue;
-                };
-                a:hover{
+                }
+
+                ;
+
+                a:hover {
                     transition: all 0.4s ease;
                     transform: scale(1.05);
-                };
+                }
+
+                ;
             }
         }
     }
-    #footer{
+
+    #footer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -318,8 +327,8 @@ body {
         margin: 0;
         font-family: Hindi;
         padding-top: 10px;
-        
-        p{
+
+        p {
             margin: 5px 0px;
         }
     }
@@ -343,7 +352,7 @@ body {
     font-weight: normal;
 }
 
-#t1{
+#t1 {
     display: none;
 }
 
@@ -353,7 +362,6 @@ body {
             align-items: center;
             display: flex;
             justify-content: space-between;
-            // background-color: green;
 
             #head {
                 align-items: center;
@@ -398,7 +406,8 @@ body {
                 margin-right: 5px;
             }
         }
-        #t1{
+
+        #t1 {
             display: flex;
             width: 100vw;
             justify-content: center;
@@ -409,32 +418,37 @@ body {
             font-weight: bold;
             margin-bottom: 10px;
         }
-        #slider{
+
+        #slider {
             height: 200px;
             width: 90%;
-            #slides{
-                img{
+
+            #slides {
+                img {
                     height: 200px;
                 }
             }
         }
-        #main{
-            #container{
+
+        #main {
+            #container {
                 margin: 20px 0px;
                 font-size: 15px;
-                
-                h1{
+
+                h1 {
                     font-size: 25px;
                     vertical-align: middle;
                     text-align: center;
                     margin: 2px 0px;
                     padding: 0px;
                 }
-                .eng{
+
+                .eng {
                     font-size: 20px;
                 }
             }
-            #content{
+
+            #content {
                 height: 45vh;
                 margin-top: 30px;
                 width: 90%;
@@ -442,13 +456,15 @@ body {
                 border-radius: 15px;
                 background-color: white;
                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-                h2{
+
+                h2 {
                     font-size: 18px;
                     vertical-align: middle;
                     text-align: center;
                 }
-                div{
-                    a{
+
+                div {
+                    a {
                         font-size: 15px;
                         height: 80%;
                         width: 31%;
@@ -460,14 +476,15 @@ body {
                 }
             }
         }
-        #footer{
+
+        #footer {
             padding: 10px 0px;
-            p{
+
+            p {
                 font-size: 12px;
                 text-align: center;
                 vertical-align: middle;
             }
         }
     }
-    
 }
