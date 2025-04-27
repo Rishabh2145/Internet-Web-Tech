@@ -240,3 +240,90 @@ body{
     src: url("../AverBold-4YlW.ttf") format("truetype");
     font-weight: normal;
 }
+
+@media screen and (max-width: 768px) {
+    body{
+        #top {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            #head {
+                align-items: center;
+
+                #image {
+                    height: 8vh;
+                    margin-right: 5px;
+
+                    img {
+                        height: 8vh;
+                    }
+                }
+
+                #text {
+                    padding-left: 10px;
+                    width: 60%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding-left: 0px;
+
+                    .ph1 {
+                        font-size: 10px;
+                    }
+
+                    .ph2 {
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            #title {
+                font-size: 15px;
+                display: none;
+            }
+
+            #time {
+                font-size: 12px;
+                padding: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        #t1 {
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            text-decoration: underline;
+            font-size: larger;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #menu{
+            #hover{
+                width: 50%;
+                height: auto;
+            }
+        }
+        
+        #main{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        #footer{
+            padding: 10px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+}

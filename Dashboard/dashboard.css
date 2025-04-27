@@ -348,6 +348,10 @@ body #footer p {
     padding: 5px;
     margin-right: 5px;
   }
+  body #menu #hover {
+    width: 50%;
+    height: auto;
+  }
   body #t1 {
     display: flex;
     width: 100vw;
