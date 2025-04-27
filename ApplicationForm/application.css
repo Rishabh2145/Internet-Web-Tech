@@ -50,6 +50,9 @@ tr,th,td{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#prevcon{
+    width:60%
+}
 
 #connection {
         padding-bottom: 10px;
