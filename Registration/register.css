@@ -56,6 +56,9 @@ body #top #time {
   font-size: 12px;
   margin-right: 35px;
 }
+body #t1 {
+  display: none;
+}
 body form {
   display: flex;
   flex-direction: column;
@@ -77,6 +80,14 @@ body form table {
   background-color: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body form table #req {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  align-items: self-start;
+  text-align: left;
 }
 body form table th {
   text-align: left;
@@ -139,7 +150,9 @@ body #down {
   color: black;
   background-color: white;
 }
-body #down h3, body #down p, body #down li {
+body #down h3,
+body #down p,
+body #down li {
   padding: 0px 20px;
 }
 body #down a {
@@ -149,6 +162,74 @@ body #down a {
 }
 body #down a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  body #top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #top #head {
+    align-items: center;
+  }
+  body #top #head #image {
+    height: 8vh;
+    margin-right: 5px;
+  }
+  body #top #head #image img {
+    height: 8vh;
+  }
+  body #top #head #text {
+    padding-left: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  body #top #head #text .ph1 {
+    font-size: 10px;
+  }
+  body #top #head #text .ph2 {
+    text-align: center;
+    font-size: 12px;
+  }
+  body #top #title {
+    font-size: 15px;
+    display: none;
+  }
+  body #top #time {
+    font-size: 12px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  body #t1 {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+  }
+  body form table {
+    width: 90%;
+  }
+  body form table td {
+    width: 40%;
+    font-size: 12px;
+  }
+  body form table td input {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+  }
+  body form #reset {
+    margin-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=register.css.map */

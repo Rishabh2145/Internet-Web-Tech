@@ -255,5 +255,118 @@ body #footer p {
   font-family: Hindi;
   src: url("../Login/hindi.ttf") format("truetype");
 }
+@media screen and (max-width: 800px) {
+  body #top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #top #head {
+    align-items: center;
+  }
+  body #top #head #image {
+    height: 8vh;
+    margin-right: 5px;
+  }
+  body #top #head #image img {
+    height: 8vh;
+  }
+  body #top #head #text {
+    padding-left: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  body #top #head #text .ph1 {
+    font-size: 10px;
+  }
+  body #top #head #text .ph2 {
+    text-align: center;
+    font-size: 12px;
+  }
+  body #top #title {
+    font-size: 15px;
+    display: none;
+  }
+  body #top #time {
+    font-size: 12px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  body #t1 {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  body #main {
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body #main #animation {
+    width: 100%;
+    height: 50%;
+  }
+  body #main #animation img {
+    width: 90%;
+  }
+  body #main #bill {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  body #main #bill table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  body #main #bill table th, body #main #bill table td {
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+  }
+  body #main #bill table th {
+    font-weight: bold;
+  }
+  body #menu #hover {
+    width: 50%;
+    height: auto;
+  }
+  body #footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Hindi;
+    padding-top: 10px;
+  }
+  body #footer p {
+    margin: 5px 0px;
+    font-size: 12px;
+  }
+}
 
 /*# sourceMappingURL=bill.css.map */
