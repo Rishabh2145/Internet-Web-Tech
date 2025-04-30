@@ -9,20 +9,27 @@
 </head>
 
 <body>
-    <h1 id="heading">New Connection Application Form</h1>
-    <p id="titlesub">Please fill all details in capital letters</p>
-    <p id="heading3">Status of previous connections(If any)</p>
-    <table id="prevcon">
-        <th>Select status</th>
-        <td>
-            <select name="Select status">
-                <option value="ongoing">Ongoing</option>
-                <option value="Discontinued">Discontinued</option>
-                <option value="paused">Pasued</option>
-            </select>
-        </td>
+    <div class="header">
+        <h1 id="heading">New Connection Application Form</h1>
+        <p id="titlesub">Please fill all details in capital letters</p>
+    </div>
+    <div class="section">
+        <h2 id="heading3">Status of previous connections(If any)</h2>
+        <p id="headingsub">Please select the status of previous connections</p>
+        <p id="headingsub">If no previous connection, please select "No Previous Connection"</p>
+        <table id="prevcon">
+            <th>Select status</th>
+            <td>
+                <select name="Select status">
+                    <option value="ongoing">Ongoing</option>
+                    <option value="Discontinued">Discontinued</option>
+                    <option value="paused">Paused</option>
+                </select>
+            </td>
     </table>
-    <h2 id="connection">CONNECTION SERVICE(S) REQUIRED</h2>
+    </div>
+    <div class="section">
+    <p id="heading3">CONNECTION SERVICE(S) REQUIRED</p>
     <table>
         <tr>
             <th id="heading2">New Connection Type</th>
@@ -49,6 +56,8 @@
         <td><input type="number" name="TotalFloors1" placeholder="Enter Floors"></td>
 
     </table>
+    </div>
+    <div class="section">
     <h3 id="heading3">1.General Particulars</h3>
     <table>
         <tr>
@@ -76,6 +85,8 @@
         <td><input type="text" name="applicantname" placeholder="Enter name"></td>
 
     </table>
+    </div>
+    <div class="section">
     <h4 id="heading3">2.Complete Supply Address</h4>
     <table>
         <tr>
@@ -95,13 +106,15 @@
         <td><input type="data" name="email" placeholder="Enter e-mail"></td>
 
     </table>
-
-    <div claass="section"></div>
+    </div>
+    <div class="section">
     <h5 id="heading3">3.Billing Address</h5>
     <p id="connectionsub">If same as supply address ignore</p>
     <input type="text" class="fileinput" name="billaddress" placeholder="Enter Billing Address">
     </div>
 
+
+    <div class="section">
     <h6 id="connection">4.Category For electricity Usage </h6>
     <table>
         <select name="Choose Category">
@@ -111,6 +124,8 @@
             <option value="Non-Domestic">Non-domestic</option>
         </select>
     </table>
+    </div>
+    <div class="section">
     <p id="heading3">5. Further Details</p>
     <table>
         <tr>
@@ -128,6 +143,8 @@
             <input type="numeric" name="gstnumber" placeholder="Enter GST Number">
         </td>
     </table>
+    </div>
+    <div class="section">
     <p id="heading3">6.Please Check If all necessary documents are attached:</p>
     <p id="headingsub">1. Proof of Identity (Aadhar, Passport, Voter ID, etc.)</p>
     <p id="headingsub">2. Proof of Address (Electricity Bill, Water Bill, etc.)</p>
@@ -142,14 +159,16 @@
         <input id="fileupload" type="file" id="fileUpload" name="document" accept=".pdf,.jpg,.word" multiple>
         <button class="custom-upload" type="submit">Upload</button>
     </form>
+    </div>
 
+    <div class="section">
     <p id="heading3">7. Declaration Form </p>
     <p id="headingsub">I hereby declare that the information provided above is true to the best of my knowledge and
         belief. I understand that the information provided above will be used to determine my eligibility for the
         connection applied for. I understand that any false information provided by me will result in the rejection of
         my application and may result in legal action against me.</p>
     <button class="custom-upload" id="submit">Submit</button>
-
+    </div>
 </body>
 
 </html>
