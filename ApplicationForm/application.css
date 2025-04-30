@@ -69,7 +69,6 @@ td {
 
 body {
     margin: 0px 80px 0px 80px;
-    /* top, right, bottom, left */
     align-items: center;
     height: 100%;
     text-align: center;
@@ -77,9 +76,6 @@ body {
 }
 
 
-.section {
-    text-align: left;
-}
 
 .fileinput {
     margin-left: 0;
@@ -154,11 +150,12 @@ input[type="file"] {
 }
 
 .section {
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center, space-between;
     align-items: left;
-    margin: 0px 150px 0px 150px;
+    margin: 0px 0px 0px 0px;
     /* top, right, bottom, left */
     padding: 0px 0px 0px 0px;
     /* top, right, bottom, left */
@@ -171,4 +168,11 @@ input[type="file"] {
     padding-left: 20px;
     padding-right: 20px;
     border: 1px solid #000004;
+
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

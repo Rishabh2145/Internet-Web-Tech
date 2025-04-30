@@ -15,18 +15,21 @@
     </div>
     <div class="section">
         <h2 id="heading3">Status of previous connections(If any)</h2>
-        <p id="headingsub">Please select the status of previous connections</p>
+        <p id="headingsub">Please select the status of previous connections</p>            
         <p id="headingsub">If no previous connection, please select "No Previous Connection"</p>
-        <table id="prevcon">
+            <table id="prevcon">
             <th>Select status</th>
             <td>
-                <select name="Select status">
+                <select name="Select status" placeholder="Select status">
+                    <option value="No Previous Connection">No Previous Connection</option>
                     <option value="ongoing">Ongoing</option>
-                    <option value="Discontinued">Discontinued</option>
+                    <option value="Disconnected">Discontinued</option>
                     <option value="paused">Paused</option>
                 </select>
             </td>
     </table>
+    <label id="heading2">Enter previous connection details</label>
+            <input id="headingsub" type="text" name="previousconnection" placeholder="Enter previous_connection details" disabled>
     </div>
     <div class="section">
     <p id="heading3">CONNECTION SERVICE(S) REQUIRED</p>
