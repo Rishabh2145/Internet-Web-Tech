@@ -5,7 +5,7 @@
     margin-top: 0;
     text-align: center;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 #titlesub {
@@ -13,7 +13,7 @@
     padding-right: 10px;
     margin-top: 0;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 #headingsub {
@@ -23,7 +23,7 @@
     margin-top: 1px;
     margin-bottom: 1px;
     text-align: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 #heading2 {
@@ -31,7 +31,7 @@
     padding-right: 10px;
     text-align: left;
     font-weight: 10;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 table {
@@ -52,7 +52,7 @@ td {
     margin-bottom: 0;
     text-align: left;
     font-weight: 550;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 #prevcon {
@@ -64,7 +64,7 @@ td {
     padding-right: 10px;
     margin-bottom: 0;
     text-align: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 body {
@@ -86,7 +86,7 @@ body {
     padding: 0;
     margin-top: 0;
     text-align: left;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: English;
 }
 
 h3,
@@ -176,3 +176,11 @@ input[type="file"] {
     padding: 0;
     box-sizing: border-box;
   }
+
+
+
+
+@font-face {
+    font-family: English;
+    src: url("../Aver-opKo.ttf") format("truetype");
+}
