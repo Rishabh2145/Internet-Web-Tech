@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<style>
+    header img {
+        vertical-align: middle;
+        margin-right: 10px;
+        height: 50px;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Page - Electricity Department of India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #757575;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003060;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Electricity Department of India</h1>
+        <p>Submit Your Complaint</p>
+    </header>
+    <main>
+        <form action="/submit-complaint" method="POST">
+            <h2>Complaint Form</h2>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+            
+            <label for="complaint-type">Complaint Type</label>
+            <select id="complaint-type" name="complaint-type" required>
+                <option value="">-- Select Complaint Type --</option>
+                <option value="power-outage">Power Outage</option>
+                <option value="billing-issue">Billing Issue</option>
+                <option value="damaged-equipment">Damaged Equipment</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="complaint-details">Complaint Details</label>
+            <textarea id="complaint-details" name="complaint-details" rows="5" placeholder="Provide details about your complaint" required></textarea>
+            
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </main>
+</body>
+</html>
