@@ -1,0 +1,197 @@
+#heading {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: English;
+}
+
+#titlesub {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0;
+    text-align: center;
+    font-family: English;
+}
+
+#headingsub {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: left;
+    font-family: English;
+}
+
+#heading2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: 10;
+    font-family: English;
+}
+
+table {
+    border: 2px solid black;
+    text-align: left;
+}
+
+tr,
+th,
+td {
+    border: 2px solid black;
+    text-align: left;
+}
+
+#heading3 {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: 550;
+    font-family: English;
+}
+
+#prevcon {
+    width: 60%
+}
+
+#connection {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    font-family: English;
+}
+
+body {
+    margin: 0px 80px 0px 80px;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: lightwhite;
+}
+
+
+
+.fileinput {
+    margin-left: 0;
+    text-align: left;
+}
+
+#connectionsub {
+    padding: 0;
+    margin-top: 0;
+    text-align: left;
+    font-family: English;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 16px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+tr {
+    height: 50px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-upload {
+    text-align: left;
+    display: inline-block;
+    padding: 12px 12px;
+    background-color: #000004;
+    color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-upload:hover {
+    background-color: #000004;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center, space-between;
+    align-items: center;
+}
+
+.section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center, space-between;
+    align-items: left;
+    margin: 0px 0px 0px 0px;
+    /* top, right, bottom, left */
+    padding: 0px 0px 0px 0px;
+    /* top, right, bottom, left */
+    background-color: lightwhite;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #000004;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+@font-face {
+  font-family: "Hindi";
+  src: url("/fonts/hindi.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "English";
+  src: url("/fonts/Aver-opKo.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Englishbold";
+  src: url("/fonts/AverBold-4YlW.ttf") format("truetype");
+  font-weight: normal;
+}

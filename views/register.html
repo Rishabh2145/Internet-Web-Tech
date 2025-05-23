@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration: Electricity Department of India</title>
-    <link rel="stylesheet" href="register.css">
-    <link rel="icon" href="../Login/logo1.png">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="icon" href="/images/logo1.png">
 </head>
 
 <body>
     <div id="top">
         <div id="head">
             <div id="image">
-                <img src="log1.png" alt="satyamev jayte">
+                <img src="/images/log1.png" alt="satyamev jayte">
             </div>
             <div id="text">
                 <p class="ph1">Department of Electricity of India</p>
@@ -24,18 +24,18 @@
         <div id="time"></div>
     </div>
     <div id="t1">Registration Form</div>
-    <form>
+    <form action="registerCred" method="POST">
         <div style="width: 80%; margin-top: 15px;">
-            <a href="../Dashboard/dashboard.html" style="text-decoration: none; "
+            <a href="/" style="text-decoration: none; "
                 id="home0">Homepage</a>
-            <a href="../Login/login.html" style="text-decoration: none; "
+            <a href="login" style="text-decoration: none; "
                 id="home1">LogIn</a>
         </div>
         <table>
             <tr>
                 <td>Create User ID in <em>(AB1234YZ)</em>:</td>
                 <td>
-                    <input type="text" id="acc_id" name="acc_id" placeholder="User ID">
+                    <input type="text" id="acc_id" name="acc_id" placeholder="User ID" required>
                     <p id="errorid"></p>
                 </td>
             </tr>
@@ -44,7 +44,7 @@
                     First Name :
                 </td>
                 <td>
-                    <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
                     <p id="errorname"></p>
                 </td>
             </tr>
@@ -62,7 +62,7 @@
                     Last Name :
                 </td>
                 <td>
-                    <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
                     <p id="errorlname"></p>
                 </td>
             </tr>
@@ -71,7 +71,7 @@
                     Email Address :
                 </td>
                 <td>
-                    <input type="text" id="email" name="email" placeholder="Email Address">
+                    <input type="text" id="email" name="email" placeholder="Email Address" required>
                     <p id="erroremail"></p>
                 </td>
             </tr>
@@ -80,7 +80,7 @@
                     Mobile Number :
                 </td>
                 <td>
-                    <input type="text" id="phone1" name="phone1" placeholder="Mobile Number">
+                    <input type="text" id="phone1" name="phone1" placeholder="Mobile Number" required>
                     <p id="errorphone"></p>
                 </td>
             </tr>
@@ -101,7 +101,7 @@
                     Create Password : <br>
                 </td>
                 <td>
-                    <input type="password" id="pass" name="pass" placeholder="Password">
+                    <input type="password" id="pass" name="pass" placeholder="Password" required>
                     <p id="errorpass"></p>
                 </td>
             </tr>
@@ -122,7 +122,7 @@
                     Confirm Password :
                 </td>
                 <td>
-                    <input type="password" id="conf_pass" name="conf_pass" placeholder="Confirm Password">
+                    <input type="password" id="conf_pass" name="conf_pass" placeholder="Confirm Password" required>
                     <p id="errorconf"></p>
                 </td>
             </tr>
@@ -156,8 +156,7 @@
 
     </div>
 
-    <script src="register.js"></script>
-    <script src="register-server.js"></script>
+    <script src="/js/register.js"></script>
 </body>
 
 </html>

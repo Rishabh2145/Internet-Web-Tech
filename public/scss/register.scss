@@ -48,6 +48,8 @@ body {
 
                 .ph2 {
                     margin-top: 2px;
+                    font-family: Hindi;
+                    font-size: 20px;
                 }
             }
         }
@@ -65,7 +67,7 @@ body {
         }
     }
 
-    #t1{
+    #t1 {
         display: none;
     }
 
@@ -92,7 +94,7 @@ body {
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-            #req{
+            #req {
                 width: 100%;
                 text-align: center;
                 padding: 10px;
@@ -100,6 +102,7 @@ body {
                 align-items: self-start;
                 text-align: left;
             }
+
             th {
                 text-align: left;
                 font-weight: bold;
@@ -242,7 +245,8 @@ body {
                 margin-right: 5px;
             }
         }
-        #t1{
+
+        #t1 {
             display: flex;
             width: 100vw;
             justify-content: center;
@@ -256,9 +260,11 @@ body {
         form {
             table {
                 width: 90%;
-                td{
+
+                td {
                     width: 40%;
                     font-size: 12px;
+
                     input {
                         width: 100%;
                         padding: 5px;
@@ -266,10 +272,27 @@ body {
                     }
                 }
             }
-            #reset{
+
+            #reset {
                 margin-right: 20px;
             }
         }
     }
 
+}
+
+@font-face {
+  font-family: "Hindi";
+  src: url("/fonts/hindi.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "English";
+  src: url("/fonts/Aver-opKo.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Englishbold";
+  src: url("/fonts/AverBold-4YlW.ttf") format("truetype");
+  font-weight: normal;
 }

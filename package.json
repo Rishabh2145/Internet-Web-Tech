@@ -1,6 +1,26 @@
 {
   "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^4.21.2",
     "jsdom": "^26.1.0",
-    "mysql2": "^3.14.0"
-  }
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10"
+  },
+  "name": "department-of-electricity",
+  "version": "1.0.0",
+  "description": "This is the official website for the Department of Electricity of India",
+  "main": "electricity.js",
+  "scripts": {
+    "test": "nodemon electricity.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rishabh2145/Internet-Web-Tech.git"
+  },
+  "author": "Rishabh and Sahal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rishabh2145/Internet-Web-Tech/issues"
+  },
+  "homepage": "https://github.com/Rishabh2145/Internet-Web-Tech#readme"
 }

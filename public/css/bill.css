@@ -1,0 +1,377 @@
+body {
+  background-color: #f0f0f0;
+  font-family: English;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+body #top {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 15px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body #top #head {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-indent: 15px;
+  font-weight: bold;
+}
+body #top #head #image {
+  height: 12vh;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 0px 10px;
+}
+body #top #head #image img {
+  height: 12vh;
+  color: black;
+}
+body #top #head #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  border-left: #ccc 1px solid;
+}
+body #top #head #text .ph1 {
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+body #top #head #text .ph2 {
+  margin-top: 2px;
+  font-family: Hindi;
+  font-size: 20px;
+}
+body #top #title {
+  font-size: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  position: inherit;
+  text-align: center;
+}
+body #top #time {
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 35px;
+}
+body #menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+body #menu #menu-icon {
+  height: 35px;
+  margin-left: 20px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #hover {
+  margin-left: 15px;
+  position: absolute;
+  display: none;
+  z-index: 1;
+  border-radius: 15px;
+  color: black;
+  width: 15%;
+  background-color: white;
+}
+body #menu #hover ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body #menu #hover ul div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
+  overflow: hidden;
+}
+body #menu #hover ul div a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  font-size: 15px;
+}
+body #menu #hover ul div:not(:last-child) {
+  border-bottom: #ccc 1px solid;
+}
+body #menu #hover ul div:hover {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+body #menu #hover ul div:hover a {
+  color: #0056b3;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+}
+body #menu #Home {
+  display: flex;
+  direction: rtl;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #Home #log {
+  background-color: #007BFF;
+  height: 40px;
+  width: 100px;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #menu #Home #log:hover {
+  background-color: #0056b3;
+}
+body #main {
+  display: flex;
+  height: 65vh;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 80%;
+  background-color: #fbf9f7;
+}
+body #main #animation {
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf9f7;
+  width: 50%;
+}
+body #main #animation img {
+  height: 80%;
+  border-radius: 15px;
+}
+body #main #bill {
+  width: 40vw;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+body #main #bill table {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+body #main #bill table th, body #main #bill table td {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+body #main #bill table th {
+  font-weight: bold;
+}
+body #main #bill button {
+  height: 50px;
+  margin: 15px;
+  width: 150px;
+  background-color: #0BDA51;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+body #main #bill select, body #main #bill input {
+  margin-left: 15px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  font-family: English;
+  text-align: center;
+  font-size: 15px;
+  background-color: #f0f0f0;
+}
+body #main #bill select {
+  width: 150px;
+}
+body #main #bill p {
+  margin: 4px;
+  width: 100%;
+}
+body #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: Hindi;
+  padding-top: 10px;
+}
+body #footer p {
+  margin: 5px 0px;
+}
+
+@font-face {
+  font-family: "Hindi";
+  src: url("/fonts/hindi.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "English";
+  src: url("/fonts/Aver-opKo.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Englishbold";
+  src: url("/fonts/AverBold-4YlW.ttf") format("truetype");
+  font-weight: normal;
+}
+
+
+@media screen and (max-width: 800px) {
+  body #top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #top #head {
+    align-items: center;
+  }
+  body #top #head #image {
+    height: 8vh;
+    margin-right: 5px;
+  }
+  body #top #head #image img {
+    height: 8vh;
+  }
+  body #top #head #text {
+    padding-left: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+  }
+  body #top #head #text .ph1 {
+    font-size: 10px;
+  }
+  body #top #head #text .ph2 {
+    text-align: center;
+    font-size: 12px;
+  }
+  body #top #title {
+    font-size: 15px;
+    display: none;
+  }
+  body #top #time {
+    font-size: 12px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  body #t1 {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  body #main {
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body #main #animation {
+    width: 100%;
+    height: 50%;
+  }
+  body #main #animation img {
+    width: 90%;
+  }
+  body #main #bill {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  body #main #bill table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  body #main #bill table th, body #main #bill table td {
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+  }
+  body #main #bill table th {
+    font-weight: bold;
+  }
+  body #menu #hover {
+    width: 50%;
+    height: auto;
+  }
+  body #footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Hindi;
+    padding-top: 10px;
+  }
+  body #footer p {
+    margin: 5px 0px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=bill.css.map */

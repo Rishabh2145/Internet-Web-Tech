@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Page: Electricity Department of India</title>
+    <link rel="icon" href="/images/logo1.png">
+    <link rel="stylesheet" href="/css/bill.css">
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="/images/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Bill Payment</div>
+        <div id="time"></div>
+    </div>
+
+    <div id="menu">
+        <div id="menu-hover"><img src="/images/list.png" id="menu-icon" alt=""></div>
+        <div id="hover">
+            <ul>
+                <div><a href="/">Home</a><br></div>
+                <div><a href="Something">Staff Section</a><br></div>
+                <div><a href="application">Apply for New Connection</a><br></div>
+                <div><a href="bill">Bill Payment</a><br></div>
+                <div><a href="complaint">Complaint</a><br></div>
+                <div><a href="feedback">Feedback</a><br></div>
+                <div><a href="contact">Contact</a><br></div>
+                <div><a href="login">Login as Existing User</a><br></div>
+                <div><a href ="register">Register as New User</a><br></div>
+                <div><a href="about">About</a><br></div>
+
+            </ul>
+        </div>
+        <div id="Home">
+            <a href="/" id="log">Homepage</a>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div id="animation">
+            <img src="images/meter.gif" alt="">
+        </div>
+
+        <div id="bill">
+            <table>
+                <tr>
+                    <h2 style="text-decoration: underline; text-align: center; width: 100%;">Bill Payment</h2>
+                </tr>
+                <tr>
+                    <th>Account ID</th>
+                    <td><input type="text" placeholder="Account ID"></td>
+                </tr>
+                <tr>
+                    <th>Account Holder Name</th>
+                    <td><input type="text" placeholder="Account Holder Name"></td>
+                </tr>
+                <tr>
+                    <th>Meter Number</th>
+                    <td><input type="text" placeholder="Meter Number"></td>
+                </tr>
+                <tr>
+                    <th>Type of Meter</th>
+                    <td>
+                        <select name="meter-type" id="meter-type">
+                            <option value="post">PostPaid</option>
+                            <option value="pre">Prepaid</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button id="pay-button">Pay Now</button>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            Powered by the Electricity Department • &copy; 2025 All Rights Reserved
+        </p>
+        <p>
+            For any queries, feel free to email us at
+            <a href="mailto:rishabh064.nitsri@gmail.com">rishabh064.nitsri@gmail.com</a>
+        </p>
+    </div>
+
+
+    <script>
+        // Function to get the current date and time
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedDate = now.toLocaleString('en-IN', options);
+            document.getElementById('time').innerText = formattedDate;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to display the time immediately
+    </script>
+    <script src="/js/bill.js"></script>
+</body>
+
+</html>

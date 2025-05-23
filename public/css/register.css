@@ -4,8 +4,13 @@ body {
   padding: 0px;
   height: 100vh;
   width: 100vw;
-  font-family: "Poppins", sans-serif;
+  font-family: English;
   overflow-x: hidden;
+}
+.ph2{
+  margin-top: 2px;
+  font-family: Hindi;
+  font-size: 20px;
 }
 body #top {
   color: black;
@@ -230,6 +235,22 @@ body #down a:hover {
   body form #reset {
     margin-right: 20px;
   }
+}
+
+@font-face {
+  font-family: "Hindi";
+  src: url("/fonts/hindi.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "English";
+  src: url("/fonts/Aver-opKo.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Englishbold";
+  src: url("/fonts/AverBold-4YlW.ttf") format("truetype");
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=register.css.map */

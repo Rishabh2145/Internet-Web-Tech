@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/images/logo1.png">
+    <title>Login: Electricity Department of India</title>
+
+</head>
+
+<body>
+    <div id="top">
+        <div id="naming">
+            <div id="image">
+                <img src="/images/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="eng">Department of Electricity of India</p>
+                <p>भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="time"></div>
+            <div id="home"><a href="/">Homepage</a></div>
+        </div>
+    </div>
+    <div id="cred">
+        <div id="lottie-animation"></div>
+        <div id="login-main">
+            <h2>Enter the Credentials</h2>
+            <form id="login-form" action="logCred" method="POST">
+                <input type="text" name="username" placeholder="User ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <div><p>Don't have an account?</p> <br> <a href="register">Register here</a></div>
+            </form>
+        </div>
+    </div>
+    <div id="contact">
+        <p>For any queries, feel free to email us at 
+            <a href="mailto:rishabh064.nitsri@gmail.com">rishabh064.nitsri@gmail.com</a>
+          </p>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/animations/animation.json'
+        });
+    </script>
+
+    <script>
+        function updateDateTime() {
+            let now = new Date();
+            let date = now.toLocaleDateString();
+            let time = now.toLocaleTimeString();
+            document.getElementById("time").innerHTML = date + " | " + time + " | IST";
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); 
+    </script>
+
+
+    <script src="/js/login.js"></script>
+
+</body>
+
+</html>
