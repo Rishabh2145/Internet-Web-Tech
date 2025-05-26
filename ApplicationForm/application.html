@@ -8,7 +8,7 @@
     <title>Application Form</title>
 </head>
 <body>
-    <form id="applicationForm" onsubmit="submitForm(event)"></form>
+    <form id="applicationForm" action="/submitApplication" method="post" enctype="multipart/form-data">
     <div class="header">
         <h1 id="heading">New Connection Application Form</h1>
         <p id="titlesub">Please fill all details in capital letters</p>
@@ -170,9 +170,11 @@
         belief. I understand that the information provided above will be used to determine my eligibility for the
         connection applied for. I understand that any false information provided by me will result in the rejection of
         my application and may result in legal action against me.</p>
-    </form>
+    
+    
     <button class="custom-upload" id="submit">Submit</button>
     </div>
+    </form>
 </body>
 
 </html>
