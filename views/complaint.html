@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint : Department of Electricity</title>
+    <link rel="stylesheet" href="/css/complaint.css">
+    <link rel="icon" href="/images/logo1.png">
+</head>
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="/images/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Complaint Form</div>
+        <div id="time"></div>
+    </div>
+
+    <div id="menu">
+        <div id="menu-hover"><img src="/images/list.png" id="menu-icon" alt=""></div>
+        <div id="hover">
+            <ul>
+                <div><a href="/">Home</a><br></div>
+                <div><a href="Something">Staff Section</a><br></div>
+                <div><a href="application">Apply for New Connection</a><br></div>
+                <div><a href="bill">Bill Payment</a><br></div>
+                <div><a href="complaint">Complaint</a><br></div>
+                <div><a href="feedback">Feedback</a><br></div>
+                <div><a href="contact">Contact</a><br></div>
+                <div><a href="login">Login as Existing User</a><br></div>
+                <div><a href ="register">Register as New User</a><br></div>
+                <div><a href="about">About</a><br></div>
+
+            </ul>
+        </div>
+        <div id="Home">
+            <a href="/" id="log">Homepage</a>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div id="lottie-animation"></div>
+        <div id="complaint-form">
+            <h2>Register Your Complaint</h2>
+            <form id= "complaint_form">
+                <table>
+                    <tr>
+                        <td>User ID:</td>
+                        <td><input type="text" id="user_id" name="user_id" placeholder="Enter your User ID" required></td>
+                    </tr>
+                    <tr>
+                        <td>Complaint Type:</td>
+                        <td>
+                            <select id="complaint_type" name="complaint_type" required>
+                                <option value="" disabled selected>Select Complaint Type</option>
+                                <option value="billing">Billing Issue</option>
+                                <option value="service">Service Issue</option>
+                                <option value="outage">Power Outage</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Complaint:</td>
+                        <td><textarea id="complaint" name="complaint" placeholder="Describe your complaint here..." required></textarea></td>
+                    </tr>
+                </table>
+                <button type="submit" id="submit">Submit Complaint</button>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            Powered by the Electricity Department • &copy; 2025 All Rights Reserved
+        </p>
+        <p>
+            For any queries, feel free to email us at
+            <a href="mailto:rishabh064.nitsri@gmail.com">rishabh064.nitsri@gmail.com</a>
+        </p>
+    </div>
+    <script>
+        function updateDateTime() {
+            let now = new Date();
+            let date = now.toLocaleDateString();
+            let time = now.toLocaleTimeString();
+            document.getElementById("time").innerHTML = date + " | " + time + " | IST";
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); 
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/animations/complaint.json'
+        });
+    </script>
+    <script src="/js/complaint.js"></script>
+</body>
+</html>
