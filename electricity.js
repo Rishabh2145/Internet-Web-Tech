@@ -19,8 +19,6 @@ app.use((req, res, next) => {
     });
 })
 
-
-
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
@@ -32,6 +30,20 @@ app.use(session({
         httpOnly: true
     }
 }))
+
+function requireStaff(req, res, next) {
+    if (!req.session.loggedIn || req.session.username !== 'ST0001FF') {
+        return res.status(403).send('<h1>403 Forbidden</h1><p>Staff access only.</p><a href="/login">Login</a>');
+        //ST0001FF Staff@001
+    }
+    next();
+}
+function requireLogin(req, res, next) {
+    if (!req.session.loggedIn) {
+        return res.status(403).send('<h1>403 Forbidden</h1><p>Login required.</p><a href="/login">Login</a>');
+    }
+    next();
+}
 
 
 app.get('/', (req, res) => {
@@ -48,12 +60,68 @@ app.get('/application', (req, res) => {
 
 app.post('/applicationSubmit', (req, res) => {
     const data = req.body;
+    const sql = `
+        INSERT INTO application (
+            Select_status, previousconnection, connType, meterType, TotalAreaOfPremises1, TotalFloors1,
+            Title, AccountID, dob1, applicantname,
+            address, Pincode, phonenumber, email,
+            billaddress, ChooseCategory,
+            pancard, aadharcard, gstnumber
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    const values = [
+        data.Select_status,
+        data.previousconnection,
+        data.connType,
+        data.meterType,
+        data.TotalAreaOfPremises1,
+        data.TotalFloors1,
+        data.Title,
+        data.AccountID,
+        data.dob1,
+        data.applicantname,
+        data.address,
+        data.Pincode,
+        data.phonenumber,
+        data.email,
+        data.billaddress,
+        data.ChooseCategory,
+        data.pancard,
+        data.aadharcard,
+        data.gstnumber
+    ];
+
+    db.query(sql, values, (err, result) => {
+        if (err) {
+            console.error('Insert error:', err);
+            return res.status(500).json({ error: 'Submission failed. Please try again.' });
+        }
+
+        console.log('Data inserted successfully:', result);
+    });
     res.render('applicationSubmit', { data });
 });
 
 
-app.get('/Status', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'status.html'));
+app.get('/Status',requireLogin, async (req, res) => {
+    const userID = req.session.username;    
+    try {
+        const [complaints] = await db.execute(
+            "SELECT * FROM complaints WHERE UserID = ?",
+            [userID]
+        );
+        const [applications] = await db.execute(
+            `SELECT * FROM application WHERE AccountID = ?`,
+            [userID]
+        );
+
+        res.render('Status', { complaints, applications });
+    } catch (err) {
+        console.error("Error loading status page:", err);
+        res.status(500).send("Internal server error");
+    }
 })
 
 app.get('/about', (req, res) => {
@@ -195,13 +263,67 @@ app.post('/api/complaints', async (req, res) => {
 
 });
 
-// app.get('/404', async (req, res) => {
-//     res.sendFile(path.join(__dirname, 'views', '404.html'));
-// });
+
+
+app.get('/staff', requireStaff, async (req, res) => {
+    try {
+        const [complaints] = await db.execute("SELECT * FROM complaints WHERE Status = 'Pending'");
+        const [applications] = await db.execute("SELECT * FROM application WHERE id NOT IN (SELECT id FROM application WHERE Status IN ('Resolved', 'Rejected'))");
+        res.render('staff', { complaints, applications });
+    } catch (err) {
+        console.error("Error loading staff page:", err);
+        res.status(500).send("Internal server error");
+    }
+});
+
+app.post('/staff/complaint-action', async (req, res) => {
+  try {
+    const { id, action } = req.body;
+    if (!id || !['Resolved', 'Rejected'].includes(action)) {
+      return res.status(400).send("Invalid request");
+    }
+
+    await db.execute("UPDATE complaints SET Status = ? WHERE ComplaintID = ?", [action, id]);
+
+    // Use redirect or JSON — pick ONE based on client
+    if (req.headers['content-type'] === 'application/json') {
+      return res.status(200).json({ success: true });
+    } else {
+      return res.redirect('/status'); // Or '/staff' based on your page
+    }
+
+  } catch (err) {
+    console.error("Complaint Action Error:", err);
+    return res.status(500).send("Server error");
+  }
+});
+
+
+app.post('/staff/application-action', async (req, res) => {
+  try {
+    const { id, action } = req.body;
+    if (!id || !['Resolved', 'Rejected'].includes(action)) {
+      return res.status(400).send("Invalid request");
+    }
+
+    await db.execute("UPDATE application SET Status = ? WHERE id = ?", [action, id]);
+
+    if (req.headers['content-type'] === 'application/json') {
+      return res.status(200).json({ success: true });
+    } else {
+      return res.redirect('/status');
+    }
+
+  } catch (err) {
+    console.error("Application Action Error:", err);
+    return res.status(500).send("Server error");
+  }
+});
+
+
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
-
 app.listen(PORT, () => {
     console.log(`The website is running on http://localhost:${PORT}`);
 })
