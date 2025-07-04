@@ -127,16 +127,25 @@ body #menu #hover ul div:hover a {
 }
 body #menu #Home {
   display: flex;
-  direction: rtl;
+  gap: 6px;
+  margin-right: 10px;
   justify-content: center;
   align-items: center;
 }
+body #menu #Home a {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 body #menu #Home #log {
   background-color: #007BFF;
-  height: 40px;
-  width: 100px;
+  height: 20px;
+  width: 80px;
   color: white;
-  margin-right: 15px;
   text-decoration: none;
   border-radius: 8px;
   display: flex;

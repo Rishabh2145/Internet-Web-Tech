@@ -122,3 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 });
+
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const res = await fetch('/api/user');
+    if (!res.ok) throw new Error('Not logged in');
+
+    const data = await res.json();
+    document.getElementById('logged').innerText = `Welcome, ${data.username} !`;
+    document.getElementById('logged').style.fontWeight = "bold";
+    document.getElementById('logout').style.display = 'block';
+    document.getElementById('user_id').value = data.account_ID;
+    document.getElementById('user_id').disabled = true;
+  } catch (err) {
+    console.log('User not logged in or error:', err.message);
+  }
+});

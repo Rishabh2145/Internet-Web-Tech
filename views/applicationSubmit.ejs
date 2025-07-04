@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application : Electricity Department of India</title>
+    <link rel="stylesheet" href="/css/applicationSubmit.css">
+    <link rel="icon" href="/images/logo1.png" type="image/png">
+
+    <style>
+        body #printSection {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            padding-top: 20px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        body #printSection h1 {
+            text-decoration: underline;
+        }
+
+        body #printSection .declaration {
+            margin-top: 30px;
+            padding: 15px;
+            width: 90%;
+            margin-top: 20px;
+            border: 1px solid #000;
+            background-color: #f9f9f9;
+        }
+
+        body #printSection .sign-box {
+            margin-top: 20px;
+            width: 200px;
+            height: 100px;
+            border-bottom: #000 1px solid;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        body #printSection .sign {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        body #printSection .form-section {
+            margin-top: 20px;
+        }
+
+        body #printSection table {
+            width: 90%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        body #printSection table th,
+        body #printSection table td {
+            padding: 10px;
+            text-align: left;
+            width: 25%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        body #printSection table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        body #printSection table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="/images/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Application Preview</div>
+        <div id="time"></div>
+    </div>
+    <div id="printSection">
+        <h1>Application for New Connection</h1>
+        <table>
+            <tr>
+                <td style="font-weight: bold; font-size: large;">Previous Connection</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Status of Previous Connection:</td>
+                <td id="prevConn" colspan="2"><%= data.Select_status%></td>
+                <td style="font-weight: bold;">Details of the Previous Connection : </td>
+                <td id="prevDetail" colspan="2"><%= data.previousconnection %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: large;">Connection Service Required:</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">New Connection type : </td>
+                <td id="connType" colspan="2"><%= data.connType %></td>
+                <td style="font-weight: bold;">Meter Type : </td>
+                <td id="meterType" colspan="2"><%= data.meterType %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Total Area of Premises: </td>
+                <td id="area" colspan="2"><%= data.TotalAreaOfPremises1 %></td>
+                <td style="font-weight: bold;">Number of floors : </td>
+                <td id="floorNo" colspan="2"><%= data.TotalFloors1 %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Total Load Required : </td>
+                <td id="load" colspan="2">None</td>
+                <td style="font-weight: bold;">Load Type : </td>
+                <td id="loadType" colspan="2">None</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Connection Purpose : </td>
+                <td id="connPurp" colspan="2"><%= data.ChooseCategory %></td>
+                <td style="font-weight: bold;">Phase Type : </td>
+                <td id="phaseType" colspan="2">None</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: large;">General Particulars</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Applicant Name : </td>
+                <td id="appName" colspan="2"><%= data.applicantname %></td>
+                <td style="font-weight: bold;">Account ID :</td>
+                <td id="accID" colspan="2"><%= data.AccountID %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Date of Birth : </td>
+                <td id="dob" colspan="2"><%= data.dob1 %></td>
+                <td style="font-weight: bold;">Contact Number : </td>
+                <td id="appContact" colspan="2"><%= data.phonenumber %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Email ID : </td>
+                <td id="appEmail" colspan="2"><%= data.email %></td>
+                <td style="font-weight: bold;">Aadhaar Number : </td>
+                <td id="aadhaar" colspan="2"><%= data.aadharcard %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">PAN Number : </td>
+                <td id="pan" colspan="2"><%= data.pancard %></td>
+                <td style="font-weight: bold;">GST Number : </td>
+                <td id="gst" colspan="2"><%= data.gstnumber %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Address : </td>
+                <td id="address" colspan="2"><%= data.address %></td>
+                <td style="font-weight: bold;">Pincode : </td>
+                <td id="pin" colspan="2"><%= data.Pincode %></td>
+            </tr>
+        </table>
+        <div class="form-section declaration">
+            <strong>Declaration:</strong>
+            <p>
+                I hereby declare that the information provided above is true and correct to the best of my knowledge and
+                belief.
+                I agree to abide by all the rules and regulations of the electricity department and undertake to pay all
+                dues in respect of electricity consumed at the said premises.
+            </p>
+        </div>
+
+        <div class="sign">
+            <div class="form-section">
+                <p><strong>Applicant Signature:</strong></p>
+                <div class="sign-box"></div>
+            </div>
+            <div class="form-section">
+                <p><strong>For Office Use Only:</strong></p>
+                <div class="sign-box"></div>
+                <p><strong>Designation :</strong></p>
+
+            </div>
+        </div>
+    </div>
+    <div id="buttons">
+        <p>
+            <strong>Note:</strong> Please print this application, sign it, and submit it to your nearest electricity
+            department office. You will be required to pay the applicable charges for the electricity meter and cable
+            installation. These charges are calculated by our executives based on the distance from the nearest
+            electricity pole. Once your application and documents are verified by our officers, our technical team will
+            be dispatched to proceed with your new electricity connection.
+        </p>
+        <p>
+            <strong>Note:</strong> Please ensure that all the details provided are accurate and complete to avoid any
+            delays in processing your application.
+        </p>
+        <p>
+            <strong>Note:</strong> If you have any questions or need assistance, please contact our customer service
+            helpline.
+        </p>
+
+        <div id="btn">
+            <button id="printButton" onclick="printFuntion()">Print Application</button>
+            <button id="home" onclick="window.document.location= '/'">Dashboard</button>
+        </div>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedDate = now.toLocaleString('en-IN', options);
+            document.getElementById('time').innerText = formattedDate;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        function printFuntion() {
+            const divContents = document.getElementById("printSection").innerHTML;
+            const printWindow = window.open('', '', 'height=700,width=900');
+            printWindow.document.write('<html><head><title>Application Form</title>');
+
+            // Copy existing styles
+            const styles = document.head.innerHTML;
+            printWindow.document.write(styles);
+
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+            printWindow.close();
+        }
+
+    </script>
+</body>
+
+</html>
