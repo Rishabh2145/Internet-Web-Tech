@@ -40,7 +40,8 @@ function requireStaff(req, res, next) {
 }
 function requireLogin(req, res, next) {
     if (!req.session.loggedIn) {
-        return res.status(403).send('<h1>403 Forbidden</h1><p>Login required.</p><a href="/login">Login</a>');
+        res.redirect('/login');
+        return;
     }
     next();
 }
@@ -50,9 +51,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'dashboard.html'));
 })
 
-app.get('/bill', (req, res) => {
+app.get('/bill',requireLogin ,async(req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'bill.html'));
 })
+
+app.get('/api/bill', requireLogin, async (req, res) => {
+    const [billingDate] = await db.execute('SELECT submitted_at FROM application WHERE AccountID = ? AND Status = ?', [req.session.username, 'Resolved']);
+    if (billingDate.length === 0) {
+        return res.status(404).json({ error: 'No billing date found for this account.' });
+    }
+    res.json({
+        billingDate: billingDate[0].submitted_at
+    });
+});
 
 app.get('/application', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'application.html'));
