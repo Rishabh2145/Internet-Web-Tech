@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard: Electricity Department of India</title>
     <link rel="icon" href="/images//logo1.png">
-    <link rel="stylesheet" href ="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 
 <body>
@@ -29,22 +29,23 @@
         <div id="hover">
             <ul>
                 <div><a href="/">Home</a><br></div>
-                <div><a href="Something">Staff Section</a><br></div>
+                <div><a href="staff">Staff Section</a><br></div>
                 <div><a href="application">Apply for New Connection</a><br></div>
                 <div><a href="bill">Bill Payment</a><br></div>
                 <div><a href="complaint">Complaint</a><br></div>
-                <div><a href="feedback">Feedback</a><br></div>
                 <div><a href="contact">Contact</a><br></div>
                 <div><a href="login">Login as Existing User</a><br></div>
                 <div><a href="register">Register as New User</a><br></div>
-                <div><a href="about">About</a><br></div>
+                <div><a href="about">About</a><br /></div>
+                <div><a href="404">This site is under Maintenance</a><br /></div>
 
             </ul>
         </div>
-        <div id="login">
+        <div id="login" style="margin-right: 10px;">
             <a href="login" id="log">LogIn</a>
             <a href="register" id="reg">Register</a>
-            <p id="logged"></p>
+            <p id="logged" style="display: none;"></p>
+            <a href="logout" id="logout" style="display: none;">Logout</a>
         </div>
 
     </div>
@@ -69,7 +70,7 @@
                 <a href="bill" style="background-color: #0D6EFD;">Online Bill Payments</a>
             </div>
             <div>
-                <a href="services" style="background-color: #198754;">Request Other Services</a>
+                <a href="staff" style="background-color: #198754;">Staff Section</a>
                 <a href="complaint" style="background-color: #423A8E;">Register a Complaint</a>
                 <a href="contact" style="background-color: #484848;">Contact us</a>
             </div>
@@ -77,13 +78,16 @@
     </div>
     <div id="footer">
         <p>
-        Powered by the Electricity Department • &copy; 2025 All Rights Reserved
+            Powered by the Electricity Department • &copy; 2025 All Rights Reserved
         </p>
         <p>
-            For any queries, feel free to email us at 
+            For any queries, feel free to email us at
             <a href="mailto:rishabh064.nitsri@gmail.com">rishabh064.nitsri@gmail.com</a>
-          </p>
+        </p>
     </div>
 
     <script src="/js/dashboard.js"></script>
+    <!-- <script src="/js/jquery-3.7.1.min.js"></script> -->
+    
 </body>
+</html>

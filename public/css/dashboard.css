@@ -154,7 +154,7 @@ body #menu #hover ul div:hover a {
 }
 body #menu #login {
   display: flex;
-  direction: rtl;
+  gap: 6px;
   justify-content: center;
   align-items: center;
 }

@@ -8,172 +8,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Form</title>
 </head>
+
 <body>
-    <form id="applicationForm" onsubmit="submitForm(event)"></form>
-    <div class="header">
-        <h1 id="heading">New Connection Application Form</h1>
-        <p id="titlesub">Please fill all details in capital letters</p>
-    </div>
-    <div class="section">
-        <h2 id="heading3">Status of previous connections(If any)</h2>
-        <p id="headingsub">Please select the status of previous connections</p>            
-        <p id="headingsub">If no previous connection, please select "No Previous Connection"</p>
+    <form id="applicationForm" method="POST" action="/applicationSubmit">
+        <div class="header">
+            <h1 id="heading">New Connection Application Form</h1>
+            <p id="titlesub">Please fill all details in capital letters</p>
+        </div>
+        <div class="section">
+            <h2 id="heading3">Status of previous connections(If any)</h2>
+            <p id="headingsub">Please select the status of previous connections</p>
+            <p id="headingsub">If no previous connection, please select "No Previous Connection"</p>
             <table id="prevcon">
-            <th>Select status</th>
-            <td>
-                <select name="Select status" placeholder="Select status">
-                    <option value="No Previous Connection">No Previous Connection</option>
-                    <option value="ongoing">Ongoing</option>
-                    <option value="Disconnected">Discontinued</option>
-                    <option value="paused">Paused</option>
+                <th>Select status</th>
+                <td>
+                    <select name="Select_status" placeholder="Select status">
+                        <option value="No Previous Connection">No Previous Connection</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="Disconnected">Discontinued</option>
+                        <option value="paused">Paused</option>
+                    </select>
+                </td>
+            </table>
+            <label id="heading2">Enter previous connection details</label>
+            <input id="headingsub" type="text" name="previousconnection" placeholder="Enter previous_connection details"
+                disabled defaultValue="No Previous Connection">
+        </div>
+        <div class="section">
+            <p id="heading3">CONNECTION SERVICE(S) REQUIRED</p>
+            <table>
+                <tr>
+                    <th id="heading2">New Connection Type</th>
+                    <th id="heading2">Meter Type</th>
+                    <th id="heading2">Total Area of Premises</th>
+                    <th id="heading2">Number of floors(Including basements and sheds)</th>
+                </tr>
+                <td>
+                    <select name="connType">
+                        <option value="permanent">Permanent</option>
+                        <option value="temp">Temporary</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Government">Government</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="meterType">
+                        <option value="postpaid">Postpaid</option>
+                        <option value="prepaid">Prepaid</option>
+                    </select>
+                </td>
+                <td><input type="text" pattern="^\d+(\.\d{1,2})?\s?(sq\s?ft|m²|sqm)$" name="TotalAreaOfPremises1"
+                        placeholder="Enter area"></td>
+                <td><input type="text" pattern="^\d+(\.\d+)?$" name="TotalFloors1" placeholder="Enter Floors"></td>
+
+            </table>
+        </div>
+        <div class="section">
+            <h3 id="heading3">1.General Particulars</h3>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Account ID</th>
+                    <th>Date of birth</th>
+                    <th>Applicant Name</th>
+                </tr>
+                <td>
+                    <select name="Title">
+                        <option value="Mr">Mr</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                </td>
+
+                <td>
+                    <input type="text" pattern="^[A-Z]{2}[0-9]{4}[A-Z]{2}$" name="AccountID"
+                        placeholder="Enter Account ID">
+                </td>
+
+                <td>
+                    <input type="date" name="dob1" placeholder="Enter DOB">
+                </td>
+                <td><input type="text" pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)*$" name="applicantname"
+                        placeholder="Enter name">
+                </td>
+
+            </table>
+        </div>
+        <div class="section">
+            <h4 id="heading3">2.Complete Supply Address</h4>
+            <table>
+                <tr>
+                    <th>Supply Address</th>
+                    <th>Area Pincode</th>
+                    <th>Mobile Number</th>
+                    <th>E-Mail</th>
+                </tr>
+                <td>
+                    <input type="text" pattern="^[a-zA-Z0-9\s,./-]{5,100}$" name="address" placeholder="Enter address">
+                </td>
+
+                <td>
+                    <input type="text" pattern="^\d{6}$" name="Pincode" placeholder="Enter pincode">
+                </td>
+                <td><input type="text" pattern="\d{10}" name="phonenumber" placeholder="Enter mobile no."></td>
+                <td><input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="email" placeholder="Enter e-mail"></td>
+
+            </table>
+        </div>
+        <div class="section">
+            <h5 id="heading3">3.Billing Address</h5>
+            <p id="connectionsub">If same as supply address ignore</p>
+            <input type="text" class="fileinput" name="billaddress" placeholder="Enter Billing Address">
+        </div>
+
+
+        <div class="section">
+            <h6 id="connection">4.Category For electricity Usage </h6>
+            <table>
+                <select name="ChooseCategory">
+                    <option value="Domestic">Domestic</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Agricultural">Agriculture</option>
+                    <option value="Non-Domestic">Non-domestic</option>
                 </select>
-            </td>
-    </table>
-    <label id="heading2">Enter previous connection details</label>
-            <input id="headingsub" type="text" name="previousconnection" placeholder="Enter previous_connection details" disabled>
-    </div>
-    <div class="section">
-    <p id="heading3">CONNECTION SERVICE(S) REQUIRED</p>
-    <table>
-        <tr>
-            <th id="heading2">New Connection Type</th>
-            <th id="heading2">Meter Type</th>
-            <th id="heading2">Total Area of Premises</th>
-            <th id="heading2">Number of floors(Including basements and sheds)</th>
-        </tr>
-        <td>
-            <select name="Connection Service(s) Required">
-                <option value="permanent">Permanent</option>
-                <option value="temp">Temporary</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Government">Government</option>
-            </select>
-        </td>
+            </table>
+        </div>
+        <div class="section">
+            <p id="heading3">5. Further Details</p>
+            <table>
+                <tr>
+                    <th>Pan Card</th>
+                    <th>Aadhar Card</th>
+                    <th>GST Number</th>
+                </tr>
+                <td>
+                    <input type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" name="pancard" placeholder="Enter Pan Card">
+                </td>
+                <td>
+                    <input type="text" pattern="\d{12}" name="aadharcard" placeholder="Enter Aadhar Card">
+                </td>
+                <td>
+                    <input type="text" pattern="^\d{2}[A-Z]{5}\d{4}[A-Z]{1}[A-Z\d]{1}[Z]{1}[A-Z\d]{1}$" name="gstnumber"
+                        placeholder="Enter GST Number">
+                </td>
+            </table>
+        </div>
+        <div class="section">
+            <p id="heading3">6.Please Check If all necessary documents are attached:</p>
+            <p id="headingsub">1. Proof of Identity (Aadhar, Passport, Voter ID, etc.)</p>
+            <p id="headingsub">2. Proof of Address (Electricity Bill, Water Bill, etc.)</p>
+            <p id="headingsub">3. Proof of Ownership (Sale Deed, Lease Agreement, etc.)</p>
+            <p id="headingsub">4. Proof of Income (Salary Slip, Income Tax Return, etc.)</p>
+            <p id="headingsub">5. Proof of Business (Trade License, Partnership Deed, etc.)</p>
+            <p id="headingsub">6. Proof of Land Use (Land Use Certificate, etc.)</p>
+            <p id="headingsub">7. Proof of Electrical Safety (Electrical Safety Certificate, etc.)</p>
+            <p id="headingsub">8. Proof of Fire Safety (Fire Safety Certificate, etc.)</p>
+            <label for="fileupload" class="custom-upload">Attach Document:</label>
+            <input id="fileupload" type="file" id="fileUpload" name="document" accept=".pdf,.jpg,.word" multiple>
+            <button class="custom-upload">Upload</button>
+            
+        </div>
 
-        <td>
-            <select name="New Connection Type">
-                <option value="postpaid">Postpaid</option>
-                <option value="prepaid">Prepaid</option>
-            </select>
-        </td>
-        <td><input type="text" pattern="^\d+(\.\d{1,2})?\s?(sq\s?ft|m²|sqm)$" name="TotalAreaOfPremises1" placeholder="Enter area"></td>
-        <td><input type="text" pattern="^\d+(\.\d+)?$" name="TotalFloors1" placeholder="Enter Floors"></td>
+        <div class="section">
+            <p id="heading3">7. Declaration Form </p>
+            <p id="headingsub">I hereby declare that the information provided above is true to the best of my knowledge
+                and
+                belief. I understand that the information provided above will be used to determine my eligibility for
+                the
+                connection applied for. I understand that any false information provided by me will result in the
+                rejection
+                of
+                my application and may result in legal action against me.</p>
 
-    </table>
-    </div>
-    <div class="section">
-    <h3 id="heading3">1.General Particulars</h3>
-    <table>
-        <tr>
-            <th>Title</th>
-            <th>Account ID</th>
-            <th>Date of birth</th>
-            <th>Applicant Name</th>
-        </tr>
-        <td>
-            <select name="Title">
-                <option value="Mr">Mr</option>
-                <option value="Dr">Dr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Ms">Ms</option>
-            </select>
-        </td>
-
-        <td>
-            <input type="text" pattern="^[A-Z]{2}[0-9]{4}[A-Z]{2}$" name="AccountID" placeholder="Enter Account ID">
-        </td>
-
-        <td>
-            <input type="date" name="dob1" placeholder="Enter DOB">
-        </td>
-        <td><input type="text" pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+)*$" name="applicantname" placeholder="Enter name"></td>
-
-    </table>
-    </div>
-    <div class="section">
-    <h4 id="heading3">2.Complete Supply Address</h4>
-    <table>
-        <tr>
-            <th>Supply Address</th>
-            <th>Area Pincode</th>
-            <th>Mobile Number</th>
-            <th>E-Mail</th>
-        </tr>
-        <td>
-            <input type="text" pattern="^[a-zA-Z0-9\s,./-]{5,100}$" name="address" placeholder="Enter address">
-        </td>
-
-        <td>
-            <input type="text" pattern="^\d{6}$" name="Pincode" placeholder="Enter pincode">
-        </td>
-        <td><input type="text" pattern="\d{10}" name="phonenumber" placeholder="Enter mobile no."></td>
-        <td><input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="email" placeholder="Enter e-mail"></td>
-
-    </table>
-    </div>
-    <div class="section">
-    <h5 id="heading3">3.Billing Address</h5>
-    <p id="connectionsub">If same as supply address ignore</p>
-    <input type="text" class="fileinput" name="billaddress" placeholder="Enter Billing Address">
-    </div>
-
-
-    <div class="section">
-    <h6 id="connection">4.Category For electricity Usage </h6>
-    <table>
-        <select name="Choose Category">
-            <option value="Domestic">Domestic</option>
-            <option value="Industrial">Industrial</option>
-            <option value="Agricultural">Agriculture</option>
-            <option value="Non-Domestic">Non-domestic</option>
-        </select>
-    </table>
-    </div>
-    <div class="section">
-    <p id="heading3">5. Further Details</p>
-    <table>
-        <tr>
-            <th>Pan Card</th>
-            <th>Aadhar Card</th>
-            <th>GST Number</th>
-        </tr>
-        <td>
-            <input type="text" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" name="pancard" placeholder="Enter Pan Card">
-        </td>
-        <td>
-            <input type="text" pattern="\d{12}" name="aadharcard" placeholder="Enter Aadhar Card">
-        </td>
-        <td>
-            <input type="text" pattern="^\d{2}[A-Z]{5}\d{4}[A-Z]{1}[A-Z\d]{1}[Z]{1}[A-Z\d]{1}$" name="gstnumber" placeholder="Enter GST Number">
-        </td>
-    </table>
-    </div>
-    <div class="section">
-    <p id="heading3">6.Please Check If all necessary documents are attached:</p>
-    <p id="headingsub">1. Proof of Identity (Aadhar, Passport, Voter ID, etc.)</p>
-    <p id="headingsub">2. Proof of Address (Electricity Bill, Water Bill, etc.)</p>
-    <p id="headingsub">3. Proof of Ownership (Sale Deed, Lease Agreement, etc.)</p>
-    <p id="headingsub">4. Proof of Income (Salary Slip, Income Tax Return, etc.)</p>
-    <p id="headingsub">5. Proof of Business (Trade License, Partnership Deed, etc.)</p>
-    <p id="headingsub">6. Proof of Land Use (Land Use Certificate, etc.)</p>
-    <p id="headingsub">7. Proof of Electrical Safety (Electrical Safety Certificate, etc.)</p>
-    <p id="headingsub">8. Proof of Fire Safety (Fire Safety Certificate, etc.)</p>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="fileupload" class="custom-upload">Attach Document:</label>
-        <input id="fileupload" type="file" id="fileUpload" name="document" accept=".pdf,.jpg,.word" multiple>
-        <button class="custom-upload" type="submit">Upload</button>
+            <input type="submit" value="Submit" id="submit">
+        </div>
     </form>
-    </div>
-
-    <div class="section">
-    <p id="heading3">7. Declaration Form </p>
-    <p id="headingsub">I hereby declare that the information provided above is true to the best of my knowledge and
-        belief. I understand that the information provided above will be used to determine my eligibility for the
-        connection applied for. I understand that any false information provided by me will result in the rejection of
-        my application and may result in legal action against me.</p>
-    </form>
-    <button class="custom-upload" id="submit">Submit</button>
-    </div>
+    <!-- <script src="/public/js/application.js"></script> -->
 </body>
 
 </html>

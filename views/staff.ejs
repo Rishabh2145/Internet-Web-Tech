@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Panel</title>
+    <link rel="stylesheet" href="/css/staff.css">
+    <link rel="icon" href="/images/logo1.png" type="image/png">
+</head>
+
+<body>
+    <div id="top">
+        <div id="head">
+            <div id="image"><img src="/images/log1.png" alt="logo"></div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Staff Panel</div>
+        <div id="time"></div>
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <% if (complaints.length> 0) { %>
+                <div class="entry-heading">Complaint Section</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Complaint ID</th>
+                            <th>User ID</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% complaints.forEach(c=> { %>
+                            <tr>
+                                <td>
+                                    <%= c.ComplaintID %>
+                                </td>
+                                <td>
+                                    <%= c.UserID %>
+                                </td>
+                                <td>
+                                    <%= c.ComplaintType %>
+                                </td>
+                                <td>
+                                    <%= c.Description %>
+                                </td>
+                                <td>
+                                    <%= c.Status %>
+                                </td>
+                                <td class="action-buttons">
+                                    <form method="POST" action="/staff/complaint-action">
+                                        <input type="hidden" name="id" value="<%= c.ComplaintID %>">
+                                        <button name="action" value="Resolved">Resolve</button>
+                                        <button name="action" value="Rejected">Reject</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+                <% } %>
+
+                    <% if (applications.length> 0) { %>
+                        <div class="entry-heading">Application Section</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Application ID</th>
+                                    <th>Name</th>
+                                    <th>Connection Type</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% applications.forEach(a=> { %>
+                                    <tr>
+                                        <td>
+                                            <%= a.id %>
+                                        </td>
+                                        <td>
+                                            <%= a.applicantname %>
+                                        </td>
+                                        <td>
+                                            <%= a.connType %>
+                                        </td>
+                                        <td>
+                                            <%= a.email %>
+                                        </td>
+                                        <td>
+                                            <%= a.Status || 'Pending' %>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                        <% } %>
+
+                            <% if (applications.length===0 && complaints.length===0) { %>
+                                <p style="font-size: 18px;">No data available right now.</p>
+                                <% } %>
+        </div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            document.getElementById('time').innerText = new Date().toLocaleString();
+        }, 1000);
+    </script>
+</body>
+
+</html>

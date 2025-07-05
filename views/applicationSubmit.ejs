@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application : Electricity Department of India</title>
+    <link rel="stylesheet" href="/css/applicationSubmit.css">
+    <link rel="icon" href="/images/logo1.png" type="image/png">
+</head>
+
+<body>
+    <% if (!data) { %>
+        <p style="color:red;">No data provided to EJS</p>
+    <% } else { %>
+    <div id="top">
+        <div id="head">
+            <div id="image">
+                <img src="/images/log1.png" alt="satyamev jayte">
+            </div>
+            <div id="text">
+                <p class="ph1">Department of Electricity of India</p>
+                <p class="ph2">भारतीय विद्युत विभाग</p>
+            </div>
+        </div>
+        <div id="title">Application Preview</div>
+        <div id="time"></div>
+    </div>
+    <div id="printSection">
+        <h1>Application for New Connection</h1>
+        <table>
+            <tr><td style="font-weight: bold; font-size: large;">Previous Connection</td></tr>
+            <tr>
+                <td style="font-weight: bold;">Status of Previous Connection:</td>
+                <td colspan="2"><%= data.Select_status || 'N/A' %></td>
+                <td style="font-weight: bold;">Details of the Previous Connection:</td>
+                <td colspan="2"><%= data.previousconnection || 'N/A' %></td>
+            </tr>
+            <tr><td style="font-weight: bold; font-size: large;">Connection Service Required:</td></tr>
+            <tr>
+                <td style="font-weight: bold;">New Connection type:</td>
+                <td colspan="2"><%= data.connType || 'N/A' %></td>
+                <td style="font-weight: bold;">Meter Type:</td>
+                <td colspan="2"><%= data.meterType || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Total Area of Premises:</td>
+                <td colspan="2"><%= data.TotalAreaOfPremises1 || 'N/A' %></td>
+                <td style="font-weight: bold;">Number of floors:</td>
+                <td colspan="2"><%= data.TotalFloors1 || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Total Load Required:</td>
+                <td colspan="2">None</td>
+                <td style="font-weight: bold;">Load Type:</td>
+                <td colspan="2">None</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Connection Purpose:</td>
+                <td colspan="2"><%= data.ChooseCategory || 'N/A' %></td>
+                <td style="font-weight: bold;">Phase Type:</td>
+                <td colspan="2">None</td>
+            </tr>
+            <tr><td style="font-weight: bold; font-size: large;">General Particulars</td></tr>
+            <tr>
+                <td style="font-weight: bold;">Applicant Name:</td>
+                <td colspan="2"><%= data.applicantname || 'N/A' %></td>
+                <td style="font-weight: bold;">Account ID:</td>
+                <td colspan="2"><%= data.AccountID || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Date of Birth:</td>
+                <td colspan="2"><%= data.dob1 || 'N/A' %></td>
+                <td style="font-weight: bold;">Contact Number:</td>
+                <td colspan="2"><%= data.phonenumber || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Email ID:</td>
+                <td colspan="2"><%= data.email || 'N/A' %></td>
+                <td style="font-weight: bold;">Aadhaar Number:</td>
+                <td colspan="2"><%= data.aadharcard || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">PAN Number:</td>
+                <td colspan="2"><%= data.pancard || 'N/A' %></td>
+                <td style="font-weight: bold;">GST Number:</td>
+                <td colspan="2"><%= data.gstnumber || 'N/A' %></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">Address:</td>
+                <td colspan="2"><%= data.address || 'N/A' %></td>
+                <td style="font-weight: bold;">Pincode:</td>
+                <td colspan="2"><%= data.Pincode || 'N/A' %></td>
+            </tr>
+        </table>
+        <div class="form-section declaration">
+            <strong>Declaration:</strong>
+            <p>
+                I hereby declare that the information provided above is true and correct to the best of my knowledge and belief. I agree to abide by all the rules and regulations of the electricity department and undertake to pay all dues in respect of electricity consumed at the said premises.
+            </p>
+        </div>
+
+        <div class="sign">
+            <div class="form-section">
+                <p><strong>Applicant Signature:</strong></p>
+                <div class="sign-box"></div>
+            </div>
+            <div class="form-section">
+                <p><strong>For Office Use Only:</strong></p>
+                <div class="sign-box"></div>
+                <p><strong>Designation :</strong></p>
+            </div>
+        </div>
+    </div>
+    <div id="buttons">
+        <p><strong>Note:</strong> Please print this application, sign it, and submit it to your nearest electricity department office...</p>
+        <div id="btn">
+            <button id="printButton" onclick="printFuntion()">Print Application</button>
+            <button id="home" onclick="window.document.location= '/'">Dashboard</button>
+        </div>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedDate = now.toLocaleString('en-IN', options);
+            document.getElementById('time').innerText = formattedDate;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        function printFuntion() {
+            const divContents = document.getElementById("printSection").innerHTML;
+            const printWindow = window.open('', '', 'height=700,width=900');
+            printWindow.document.write('<html><head><title>Application Form</title>');
+            const styles = document.head.innerHTML;
+            printWindow.document.write(styles);
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(divContents);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
+            printWindow.close();
+        }
+    </script>
+    <% } %>
+</body>
+
+</html>
