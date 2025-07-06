@@ -60,12 +60,12 @@ npm start
 
 **Rishabh Kumar**  
 💻 Computer Science Student  
-🎓 B.Tech, National Institute of Technology, Srinagar
-🌐 GitHub: [@Rishabh2145](https://github.com/Rishabh2145)
+🎓 B.Tech, National Institute of Technology, Srinagar  
+🌐 GitHub: [@Rishabh2145](https://github.com/Rishabh2145)  
 📍 Location: India  
 
 **Sahal Riyaz**  
 💻 Computer Science Student  
-🎓 B.Tech, National Institute of Technology, Srinagar
-🌐 GitHub: [@SahalRiyaz](https://github.com/SahalRiyaz)
+🎓 B.Tech, National Institute of Technology, Srinagar  
+🌐 GitHub: [@SahalRiyaz](https://github.com/SahalRiyaz)  
 📍 Location: India  
