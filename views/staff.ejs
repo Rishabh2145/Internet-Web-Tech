@@ -98,6 +98,13 @@
                                         <td>
                                             <%= a.Status || 'Pending' %>
                                         </td>
+                                        <td>
+                                            <form method="POST" action="/staff/application-action">
+                                                <input type="hidden" name="id" value="<%= a.id %>">
+                                                <button name="action" value="Resolved">Resolve</button>
+                                                <button name="action" value="Rejected">Reject</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     <% }) %>
                             </tbody>

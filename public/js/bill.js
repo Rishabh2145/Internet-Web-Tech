@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 document.getElementById('pay-button').addEventListener('click', async () => {
   try {
-    const res = await fetch('/api/bill', { method: 'POST' });
+    const res = await fetch('/api/bill');
     if (!res.ok) throw new Error('Payment failed');
 
     const data = await res.json();
@@ -96,9 +96,9 @@ document.getElementById('pay-button').addEventListener('click', async () => {
     const current = new Date();
     const day = current - new Date(data.billingDate);
     const days = Math.floor(day / (1000 * 60 * 60 * 24));
-    const billAmount = days * 10; // Assuming a rate of 10 per day
+    const billAmount = days * 25; // Assuming a rate of 25 per day
     console.log(`Bill amount for ${days} days: ${billAmount}`);
-    document.querySelector('input[placeholder="Meter Rupees"]').value = billAmount;
+    document.querySelector('input[placeholder="Meter Rupees"]').value = "₹ " + billAmount;
   } catch (err) {
     console.error('Payment error:', err.message);
   }

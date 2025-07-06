@@ -57,6 +57,7 @@ app.get('/bill',requireLogin ,async(req, res) => {
 
 app.get('/api/bill', requireLogin, async (req, res) => {
     const [billingDate] = await db.execute('SELECT submitted_at FROM application WHERE AccountID = ? AND Status = ?', [req.session.username, 'Resolved']);
+    console.log(billingDate);
     if (billingDate.length === 0) {
         return res.status(404).json({ error: 'No billing date found for this account.' });
     }
@@ -300,7 +301,7 @@ app.post('/staff/complaint-action', async (req, res) => {
     if (req.headers['content-type'] === 'application/json') {
       return res.status(200).json({ success: true });
     } else {
-      return res.redirect('/status'); // Or '/staff' based on your page
+      return res.redirect('/staff');
     }
 
   } catch (err) {
@@ -322,7 +323,7 @@ app.post('/staff/application-action', async (req, res) => {
     if (req.headers['content-type'] === 'application/json') {
       return res.status(200).json({ success: true });
     } else {
-      return res.redirect('/status');
+      return res.redirect('/staff');
     }
 
   } catch (err) {
