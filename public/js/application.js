@@ -14,10 +14,9 @@ document.getElementById('applicationForm').addEventListener('submit', async func
             body: data
         });
 
-        const result = await response.json(); 
+        const result = await response.json();
 
         if (response.ok) {
-            // Redirect to new page after successful insert
             window.location.href = result.redirect;
         } else {
             alert(result.error || "Something went wrong.");
@@ -26,4 +25,13 @@ document.getElementById('applicationForm').addEventListener('submit', async func
         alert("Submission failed. Please try again.");
         console.error(err);
     }
+});
+
+document.addEventListener('DOMContentLoaded',  async function () {
+    const res = await fetch('/api/user');
+    if (!res.ok) throw new Error('Not logged in');
+
+    const data = await res.json();
+    document.getElementById('accountID').value = data.account_ID;
+    document.getElementById('accountID').disabled = true;
 });

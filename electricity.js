@@ -66,11 +66,11 @@ app.get('/api/bill', requireLogin, async (req, res) => {
     });
 });
 
-app.get('/application', (req, res) => {
+app.get('/application',requireLogin, (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'application.html'));
 })
 
-app.post('/applicationSubmit', (req, res) => {
+app.post('/applicationSubmit', requireLogin, (req, res) => {
     const data = req.body;
     const sql = `
         INSERT INTO application (
