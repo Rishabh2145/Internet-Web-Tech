@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded',  async function () {
 
     const data = await res.json();
     document.getElementById('accountID').value = data.account_ID;
-    document.getElementById('accountID').disabled = true;
+    document.getElementById('accountID').readOnly = true;
 });
