@@ -10,7 +10,7 @@
     "nodemon": "^3.1.10"
   },
   "name": "department-of-electricity",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "This is the official website for the Department of Electricity of India",
   "main": "electricity.js",
   "scripts": {

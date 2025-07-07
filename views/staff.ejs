@@ -20,6 +20,29 @@
         <div id="title">Staff Panel</div>
         <div id="time"></div>
     </div>
+    <div id="menu">
+        <div id="menu-hover"><img src="/images/list.png" id="menu-icon" alt=""></div>
+        <div id="hover">
+            <ul>
+                <div><a href="/">Home</a><br></div>
+                <div><a href="staff">Staff Section</a><br></div>
+                <div><a href="application">Apply for New Connection</a><br></div>
+                <div><a href="bill">Bill Payment</a><br></div>
+                <div><a href="complaint">Complaint</a><br></div>
+                <div><a href="contact">Contact</a><br></div>
+                <div><a href="login">Login as Existing User</a><br></div>
+                <div><a href="register">Register as New User</a><br></div>
+                <div><a href="about">About</a><br></div>
+
+            </ul>
+        </div>
+        <div id="Home">
+            <p id="logged"></p>
+            <a href="/" id="log">Homepage</a>
+            <a href="login" id="logout" style="display: none;">Logout</a>
+        </div>
+
+    </div>
 
     <div id="main">
         <div id="content">
@@ -116,7 +139,7 @@
                                 <% } %>
         </div>
     </div>
-
+    <script src="/js/about.js"></script>
     <script>
         setInterval(() => {
             document.getElementById('time').innerText = new Date().toLocaleString();
